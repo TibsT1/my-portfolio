@@ -48,7 +48,10 @@ function updateActiveNav() {
     link.classList.toggle("active", link === active);
   });
 
-  if (!active || !navIndicator || window.innerWidth <= 960) return;
+  if (!active || !navIndicator || window.innerWidth <= 980) {
+    if (navIndicator) navIndicator.style.opacity = "0";
+    return;
+  }
 
   const navRect = nav.getBoundingClientRect();
   const linkRect = active.getBoundingClientRect();
@@ -124,8 +127,19 @@ function updateScrollButton() {
 scrollTopButton?.addEventListener("click", () => smoothScrollTo(0, 760));
 
 window.addEventListener("scroll", updateScrollButton, { passive: true });
-window.addEventListener("resize", updateActiveNav);
-window.addEventListener("load", updateActiveNav);
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 980 && nav?.classList.contains("is-open")) {
+    nav.classList.remove("is-open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+    if (menuToggle) menuToggle.textContent = "Menu";
+  }
+  updateActiveNav();
+});
+
+window.addEventListener("load", () => {
+  updateActiveNav();
+  window.setTimeout(updateActiveNav, 120);
+});
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
