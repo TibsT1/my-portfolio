@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found | Tiberiu Mihai Toma</title>
+  <meta name="description" content="The requested portfolio page could not be found.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <main class="not-found-page">
+    <section class="not-found-card">
+      <p class="section-kicker">404</p>
+      <h1>Page not found.</h1>
+      <p class="intro-text">The link you opened does not match a page in this portfolio.</p>
+      <a class="button button--primary" href="./">Return to portfolio</a>
+    </section>
+  </main>
+
+  <style>
+    .not-found-page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: var(--space-5);
+    }
+
+    .not-found-card {
+      width: min(680px, 100%);
+      padding: var(--space-7);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-3);
+      background: var(--surface);
+    }
+
+    .not-found-card .button {
+      margin-top: var(--space-6);
+    }
+  </style>
+</body>
+</html>
