@@ -7,6 +7,7 @@ const themeToggle = document.querySelector(".theme-toggle");
 const themeWipe = document.querySelector(".theme-wipe");
 const scrollTopButton = document.querySelector(".scroll-top");
 const revealItems = document.querySelectorAll(".reveal");
+const cvLinks = document.querySelectorAll("[data-cv-link]");
 
 function easeOutQuart(value) {
   return 1 - Math.pow(1 - value, 4);
@@ -18,14 +19,25 @@ function smoothScrollTo(targetY, duration = 760) {
   const startTime = performance.now();
 
   function frame(now) {
-    const elapsed = now - startTime;
-    const progress = Math.min(elapsed / duration, 1);
+    const progress = Math.min((now - startTime) / duration, 1);
     window.scrollTo(0, startY + distance * easeOutQuart(progress));
 
     if (progress < 1) requestAnimationFrame(frame);
   }
 
   requestAnimationFrame(frame);
+}
+
+function updateCvLinks() {
+  const settings = window.PORTFOLIO_SETTINGS || {};
+  const cvUrl = settings.cvUrl || "assets/documents/cv.html";
+  const target = settings.cvOpensInNewTab === false ? "_self" : "_blank";
+
+  cvLinks.forEach((link) => {
+    link.setAttribute("href", cvUrl);
+    link.setAttribute("target", target);
+    if (target === "_blank") link.setAttribute("rel", "noopener noreferrer");
+  });
 }
 
 function updateActiveNav() {
@@ -117,5 +129,6 @@ window.addEventListener("load", updateActiveNav);
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
+updateCvLinks();
 updateActiveNav();
 updateScrollButton();

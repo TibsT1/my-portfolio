@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects | Tiberiu Mihai Toma</title>
-  <meta name="description" content="Selected projects by Tiberiu Mihai Toma, including Tibs Diagnostic Toolkit, ValuTints, Nextcloud, Jellyfin and custom PC building.">
+  <meta name="description" content="Projects by Tiberiu Mihai Toma, including Tibs Diagnostic Toolkit, ValuTints, Nextcloud, Jellyfin and custom PC building.">
   <meta name="author" content="Tiberiu Mihai Toma">
   <meta property="og:title" content="Projects | Tiberiu Mihai Toma">
-  <meta property="og:description" content="Selected projects by Tiberiu Mihai Toma, including Tibs Diagnostic Toolkit, ValuTints, Nextcloud, Jellyfin and custom PC building.">
+  <meta property="og:description" content="Projects by Tiberiu Mihai Toma, including Tibs Diagnostic Toolkit, ValuTints, Nextcloud, Jellyfin and custom PC building.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tibst1.github.io/tibs-portfolio/">
   <link rel="canonical" href="https://tibst1.github.io/tibs-portfolio/">
@@ -19,10 +19,10 @@
   
 <header class="site-header">
   <div class="container header-grid">
-    <a class="brand" href="index.html" aria-label="Tibi Toma home">
+    <a class="brand" href="index.html" aria-label="Tiberiu Mihai Toma home">
       <span class="brand-mark" aria-hidden="true">TT</span>
       <span class="brand-copy">
-        <strong>Tibi Toma</strong>
+        <strong>Tiberiu Mihai Toma</strong>
         <small>Cybersecurity graduate</small>
       </span>
     </a>
@@ -47,14 +47,15 @@
   </div>
 </header>
 
+
   <main id="main-content">
 
     <section class="page-intro">
       <div class="container intro-grid">
-        <h1 class="reveal is-visible">Project pages written like case notes, not feature cards.</h1>
+        <h1 class="reveal is-visible">These are the projects I can actually talk through.</h1>
         <div class="intro-copy reveal reveal-delay-1">
           <p>
-            Each project below explains what I was trying to build, what I used and what the project proves about my technical ability.
+            I chose these because they are connected to the kind of work I want to do: support, troubleshooting, systems, infrastructure, security, and websites.
           </p>
         </div>
       </div>
@@ -62,37 +63,38 @@
 
     <section id="diagnostic-toolkit" class="case-study case-study--first">
       <div class="container case-grid">
-        <aside class="case-index reveal">
+        <aside class="case-sidebar reveal">
           <span>01</span>
-          <p>Python / IT support</p>
-          <a href="https://github.com/TibsT1/tibs-diagnostic-toolkit" target="_blank" rel="noopener noreferrer">Open GitHub</a>
+          <p>Python · IT diagnostics</p>
+          <a href="https://github.com/TibsT1/tibs-diagnostic-toolkit" target="_blank" rel="noopener noreferrer">GitHub repository</a>
         </aside>
 
         <article class="case-body reveal reveal-delay-1">
           <h2>Tibs Diagnostic Toolkit</h2>
           <p>
-            I built this as a practical support tool rather than a portfolio decoration. The idea is simple: when a device or connection is acting up, run one tool, collect the basic facts and export a report that can be reviewed properly.
+            I built Tibs Diagnostic Toolkit as a small first-line troubleshooting tool. The goal is to collect useful checks quickly, save the results, and make it easier to explain what has already been tested.
+          </p>
+          <p>
+            The tool is written in Python and is designed to work across Windows, Linux, and Android through Termux. It checks internet reachability, DNS resolution, gateway and IPv4 details where available, latency, packet loss, system information, storage, and website reachability.
           </p>
 
-          <div class="case-split">
+          <div class="case-columns">
             <div>
-              <h3>What it does</h3>
+              <h3>What I focused on</h3>
               <ul>
-                <li>Checks whether the internet is reachable without relying only on DNS.</li>
-                <li>Tests DNS resolution, latency and packet loss.</li>
-                <li>Detects local IPv4 and gateway details where the platform allows it.</li>
-                <li>Collects system information such as CPU, memory and storage details.</li>
-                <li>Creates timestamped reports for troubleshooting records.</li>
+                <li>Making the checks useful for real troubleshooting.</li>
+                <li>Handling missing commands or restricted platforms without crashing.</li>
+                <li>Creating timestamped reports that can be saved and reviewed.</li>
+                <li>Keeping the tool simple enough to run quickly.</li>
               </ul>
             </div>
-
             <div>
-              <h3>What it shows</h3>
+              <h3>What I learned</h3>
               <ul>
-                <li>Python scripting for a real support workflow.</li>
-                <li>Cross-platform thinking across Windows, Linux and Android Termux.</li>
-                <li>Testing discipline with regression, fuzz and concurrency checks.</li>
-                <li>Defensive programming when commands or permissions are missing.</li>
+                <li>How to structure a practical CLI tool.</li>
+                <li>How different platforms expose system and network information.</li>
+                <li>Why defensive error handling matters in support tools.</li>
+                <li>How testing helps stop old fixes from breaking again.</li>
               </ul>
             </div>
           </div>
@@ -105,35 +107,39 @@ python -m unittest discover -s tests -v</pre>
 
     <section id="valutints" class="case-study">
       <div class="container case-grid">
-        <aside class="case-index reveal">
+        <aside class="case-sidebar reveal">
           <span>02</span>
-          <p>Live business site</p>
-          <a href="https://valutints.co.uk" target="_blank" rel="noopener noreferrer">Open site</a>
+          <p>Business website</p>
+          <a href="https://valutints.co.uk" target="_blank" rel="noopener noreferrer">Live website</a>
+          <a href="https://github.com/TibsT1/valu-tints-website-previews" target="_blank" rel="noopener noreferrer">GitHub repository</a>
         </aside>
 
         <article class="case-body reveal reveal-delay-1">
           <h2>ValuTints website</h2>
           <p>
-            This was a family business website, which meant the site had to be practical before anything else. Visitors needed to understand the services, see examples of the work and find a clear way to get in contact.
+            I built the ValuTints website for my parents’ car wrapping and window tinting business. It needed to be clear, usable, and focused on helping customers understand the services and get in contact.
+          </p>
+          <p>
+            I worked on the page structure, service information, gallery presentation, contact flow, responsive layout, metadata, sitemap, robots file, and deployment preparation.
           </p>
 
-          <div class="case-split">
+          <div class="case-columns">
             <div>
               <h3>What I handled</h3>
               <ul>
-                <li>Page structure for services, gallery content, contact and business information.</li>
-                <li>Responsive layout so the site works properly on phones and desktop screens.</li>
-                <li>Copy and contact flow organised around the actual business.</li>
-                <li>Iteration from feedback so the design stayed consistent across pages.</li>
+                <li>Multi-page static website structure.</li>
+                <li>Responsive navigation and mobile layout.</li>
+                <li>Service-focused content and calls to action.</li>
+                <li>Real business imagery and direct contact links.</li>
               </ul>
             </div>
-
             <div>
-              <h3>Why it matters</h3>
+              <h3>What it shows</h3>
               <ul>
-                <li>It is a real website for real people, not a fake landing page.</li>
-                <li>It demonstrates HTML, CSS, JavaScript, deployment preparation and maintenance.</li>
-                <li>It gave me practice translating a business need into a usable site.</li>
+                <li>I can build for an actual client need.</li>
+                <li>I can organise information into usable pages.</li>
+                <li>I can revise a site from feedback.</li>
+                <li>I can prepare a static site for live deployment.</li>
               </ul>
             </div>
           </div>
@@ -143,34 +149,36 @@ python -m unittest discover -s tests -v</pre>
 
     <section id="nextcloud" class="case-study">
       <div class="container case-grid">
-        <aside class="case-index reveal">
+        <aside class="case-sidebar reveal">
           <span>03</span>
-          <p>Self-hosting</p>
+          <p>Self-hosting · Docker</p>
         </aside>
 
         <article class="case-body reveal reveal-delay-1">
           <h2>Nextcloud self-hosted server</h2>
           <p>
-            I hosted a private cloud storage service using Nextcloud and Docker on my own hardware. The project fed into my dissertation work and taught me how different a system feels when I am responsible for access, storage and maintenance.
+            I hosted a private cloud storage service using Nextcloud and Docker on my own hardware. This project helped me understand what is involved in running a service myself rather than just using a finished product.
+          </p>
+          <p>
+            I worked with container setup, user access, storage planning, local networking, Tailscale for private remote access, and port forwarding as a comparison point for exposing services publicly.
           </p>
 
-          <div class="case-split">
+          <div class="case-columns">
             <div>
-              <h3>What I worked with</h3>
+              <h3>Tools and topics</h3>
               <ul>
-                <li>Nextcloud for personal cloud storage.</li>
-                <li>Docker for service deployment.</li>
-                <li>Tailscale for private remote access.</li>
-                <li>Port forwarding as a comparison point for public exposure.</li>
+                <li>Nextcloud for private file storage.</li>
+                <li>Docker for containerised deployment.</li>
+                <li>Tailscale for remote access without opening public ports.</li>
+                <li>Port forwarding and the security trade-offs around exposure.</li>
               </ul>
             </div>
-
             <div>
               <h3>What I learned</h3>
               <ul>
-                <li>Remote access is a security decision, not just a convenience.</li>
-                <li>Documentation matters when rebuilding or debugging a service.</li>
-                <li>Self-hosting makes networking and storage concepts much more concrete.</li>
+                <li>Remote access is a security choice, not just a convenience.</li>
+                <li>Documentation matters when rebuilding or troubleshooting.</li>
+                <li>Self-hosting makes storage, networking, and updates feel much more real.</li>
               </ul>
             </div>
           </div>
@@ -178,41 +186,37 @@ python -m unittest discover -s tests -v</pre>
       </div>
     </section>
 
-    <section class="section section--lined">
+    <section class="section section-line">
       <div class="container lab-grid">
         <article class="lab-card reveal">
           <h2>Jellyfin media server</h2>
-          <p>Set up a home media server to access films, shows and books stored on my own devices. Useful for understanding user accounts, media libraries, network access and service reliability.</p>
+          <p>I set up Jellyfin so I could remotely access films, shows, and books stored on my own devices. It helped me practise account setup, library organisation, local services, and remote access.</p>
         </article>
-
         <article class="lab-card reveal reveal-delay-1">
           <h2>Custom PC build</h2>
-          <p>Built a full desktop from parts, including CPU, GPU, cooling, storage, power, motherboard connections and front-panel wiring.</p>
+          <p>I assembled a desktop PC from parts, including CPU, GPU, cooling, storage, motherboard connections, power cabling, front-panel wiring, and cable management.</p>
         </article>
-
         <article class="lab-card reveal reveal-delay-2">
           <h2>Job tracker workflow</h2>
-          <p>Worked with structured CSV records for job applications, follow-ups, statuses and outreach notes. This helped turn a messy job search into something trackable.</p>
+          <p>I worked with CSV-based tracking for applications, follow-ups, statuses, and notes. It helped me keep a messy job search structured and easier to review.</p>
         </article>
-
         <article class="lab-card reveal">
-          <h2>Public-network safety app idea</h2>
-          <p>Explored a cross-platform concept for protecting devices on weak or public networks through local VPN-style filtering, safer DNS choices and clear status checks.</p>
+          <h2>Public-network safety idea</h2>
+          <p>I explored an app idea for safer public Wi-Fi use, based around local VPN-style filtering, DNS choices, connection status, and clear user warnings.</p>
         </article>
-
         <article class="lab-card reveal reveal-delay-1">
           <h2>Two-ball arena simulator</h2>
-          <p>Experimented with a small game idea where different “fighters” have simple powers and simulated movement. Useful for practising game logic, menus and packaged Windows builds.</p>
+          <p>I experimented with a small Windows game concept where two balls fight using different powers. It gave me practice with movement, collision logic, menus, and packaged builds.</p>
         </article>
-
         <article class="lab-card reveal reveal-delay-2">
-          <h2>Portfolio rebuild</h2>
-          <p>This site itself is part of the work: cleaner file structure, separate pages, responsive navigation, custom 404, sitemap, robots file, CV page and deployable static assets.</p>
+          <h2>Portfolio work</h2>
+          <p>I maintain this portfolio as a static website project with separate pages, reusable styling, JavaScript interactions, SEO files, and a configurable CV link.</p>
         </article>
       </div>
     </section>
 
   </main>
+
   
 <footer class="site-footer">
   <div class="container footer-grid">
@@ -227,6 +231,8 @@ python -m unittest discover -s tests -v</pre>
 
   <button class="scroll-top" type="button" aria-label="Scroll back to top">Top</button>
   <div class="theme-wipe" aria-hidden="true"></div>
+
+  <script src="assets/js/site.config.js"></script>
   <script src="assets/js/site.js" defer></script>
 </body>
 </html>
