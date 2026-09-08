@@ -1,369 +1,142 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page="home">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tiberiu Mihai Toma | Technical Portfolio</title>
-  <meta name="description" content="Technical portfolio for Tiberiu Mihai Toma, a Cyber Security undergraduate focused on self-hosting, IT support, networking, web development, and practical computing projects.">
+  <meta name="description" content="Technical portfolio for Tiberiu Mihai Toma, a Cybersecurity Graduate focused on IT support, self-hosting, networking, web development and practical computing projects.">
   <meta name="author" content="Tiberiu Mihai Toma">
   <meta property="og:title" content="Tiberiu Mihai Toma | Technical Portfolio">
-  <meta property="og:description" content="Cyber Security undergraduate building practical projects with Nextcloud, Docker, Tailscale, Jellyfin, hardware, and web technologies.">
+  <meta property="og:description" content="Technical portfolio for Tiberiu Mihai Toma, a Cybersecurity Graduate focused on IT support, self-hosting, networking, web development and practical computing projects.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tibst1.github.io/tibs-portfolio/">
   <link rel="canonical" href="https://tibst1.github.io/tibs-portfolio/">
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
   <link rel="stylesheet" href="assets/css/main.css">
+  <script>document.documentElement.dataset.page = "home";</script>
 </head>
-
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
+  
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Tiberiu Mihai Toma home">
+    <img src="assets/icons/logo.svg" alt="" class="brand__mark">
+    <span>
+      <strong>Tibi Toma</strong>
+      <small>Technical Portfolio</small>
+    </span>
+  </a>
 
-  <div class="mobile-header">
-    <a class="identity identity--mobile" href="#top" aria-label="Go to top">
-      <img src="assets/icons/logo.svg" alt="" class="identity__mark">
-      <span>
-        <strong>Tibi</strong>
-        <small>Technical portfolio</small>
-      </span>
-    </a>
+  <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">
+    Menu
+  </button>
 
-    <div class="mobile-header__actions">
-      <button class="theme-button" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
-        <span class="theme-button__label">Theme</span>
-        <span class="theme-button__switch" aria-hidden="true"></span>
-      </button>
-      <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">
-        Menu
-      </button>
+  <nav class="site-nav" aria-label="Main navigation">
+    <span class="site-nav__indicator" aria-hidden="true"></span>
+    <a href="index.html" data-page="home">Home</a>
+    <a href="about.html" data-page="about">About</a>
+    <a href="projects.html" data-page="projects">Projects</a>
+    <a href="skills.html" data-page="skills">Skills</a>
+    <a href="experience.html" data-page="experience">Experience</a>
+    <a href="contact.html" data-page="contact">Contact</a>
+  </nav>
+
+  <button class="theme-button" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
+    <span>Theme</span>
+    <span class="theme-button__switch" aria-hidden="true"></span>
+  </button>
+</header>
+
+  <main id="main-content">
+    
+<section class="hero page-section">
+  <div class="layout hero__layout">
+    <div class="hero__copy reveal is-visible">
+      <p class="eyebrow">Cybersecurity Graduate · Web Development · Practical IT</p>
+      <h1>Technical projects built around systems, support and security.</h1>
+      <p class="lead">
+        I’m Tiberiu Mihai Toma, usually Tibi. I graduated from Buckinghamshire New University with a BSc in Cyber Security, achieving Upper Second-Class Honours with 69%. I build practical projects around self-hosting, networking, troubleshooting, web development and everyday computing.
+      </p>
+
+      <div class="action-row">
+        <a class="button button--primary" href="projects.html">View projects</a>
+        <a class="button" href="assets/documents/cv.html">View CV</a>
+        <a class="button" href="https://mail.google.com/mail/?view=cm&fs=1&to=tiberiumtoma%40gmail.com&su=Portfolio%20Contact&body=Hi%20Tibi%2C%0A%0AI%20found%20your%20portfolio%20and%20wanted%20to%20contact%20you." target="_blank" rel="noopener noreferrer">Email me</a>
+      </div>
     </div>
 
-    <nav class="mobile-nav" aria-label="Mobile navigation">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-
-  <div class="site-shell">
-    <aside class="site-sidebar" aria-label="Portfolio navigation">
-      <div>
-        <a class="identity" href="#top" aria-label="Go to top">
-          <img src="assets/icons/logo.svg" alt="" class="identity__mark">
-          <span>
-            <strong>Tiberiu Mihai Toma</strong>
-            <small>Cyber Security Undergraduate</small>
-          </span>
-        </a>
-
-        <nav class="sidebar-nav" aria-label="Main navigation">
-          <span class="sidebar-nav__indicator" aria-hidden="true"></span>
-          <a href="#about"><span>About</span><small>01</small></a>
-          <a href="#projects"><span>Projects</span><small>02</small></a>
-          <a href="#skills"><span>Skills</span><small>03</small></a>
-          <a href="#experience"><span>Experience</span><small>04</small></a>
-          <a href="#contact"><span>Contact</span><small>05</small></a>
-        </nav>
+    <aside class="summary-card reveal reveal-delay-1">
+      <div class="cat-art" aria-hidden="true">
+        <span>/\_/\</span>
+        <span>( o.o )</span>
+        <span>&gt; ^ &lt;</span>
       </div>
 
-      <div class="sidebar-footer">
-        <p class="status-note">
-          <span>Current focus</span>
-          Entry-level IT, support, web, and cyber security opportunities.
-        </p>
-
-        <button class="theme-button theme-button--wide" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
-          <span class="theme-button__label">Theme</span>
-          <span class="theme-button__switch" aria-hidden="true"></span>
-        </button>
-      </div>
-    </aside>
-
-    <main id="main-content" class="site-main">
-      <section id="top" class="hero-section">
-        <div class="content-grid hero-grid">
-          <div class="hero-copy reveal is-visible">
-            <p class="section-kicker">Technical portfolio</p>
-            <h1>Computers, systems, and security, built from the ground up.</h1>
-            <p class="intro-text">
-              I’m Tiberiu Mihai Toma, usually Tibi. I study Cyber Security at Buckinghamshire New University and build practical projects around self-hosting, networking, web development, and everyday computing.
-            </p>
-
-            <div class="button-row">
-              <a class="button button--primary" href="#projects">View selected work</a>
-              <button class="button" type="button" data-open-cv>View CV</button>
-              <a class="button" href="https://mail.google.com/mail/?view=cm&fs=1&to=tiberiumtoma%40gmail.com&su=Portfolio%20Contact&body=Hi%20Tibi%2C%0A%0AI%20found%20your%20portfolio%20and%20wanted%20to%20contact%20you." target="_blank" rel="noopener noreferrer">Email me</a>
-            </div>
-          </div>
-
-          <aside class="profile-card reveal reveal-delay-1" aria-label="Profile summary">
-            <div class="ascii-cat" aria-hidden="true">
-              <span>/\_/\</span>
-              <span>( o.o )</span>
-              <span>&gt; ^ &lt;</span>
-            </div>
-
-            <h2>Profile snapshot</h2>
-            <dl>
-              <div>
-                <dt>Studying</dt>
-                <dd>Cyber Security at Buckinghamshire New University</dd>
-              </div>
-              <div>
-                <dt>Building</dt>
-                <dd>Nextcloud, Jellyfin, websites, and hands-on hardware projects</dd>
-              </div>
-              <div>
-                <dt>Interested in</dt>
-                <dd>IT support, networking, systems, web, and security fundamentals</dd>
-              </div>
-            </dl>
-          </aside>
-        </div>
-      </section>
-
-      <section id="about" class="section">
-        <div class="content-grid section-heading reveal">
-          <p class="section-number">01 / About</p>
-          <div>
-            <h2>Practical learning through real setups, not just coursework.</h2>
-            <p>
-              My strongest experience comes from combining university study with personal projects that require configuration, troubleshooting, documentation, and iteration.
-            </p>
-          </div>
-        </div>
-
-        <div class="content-grid about-layout">
-          <article class="text-panel reveal reveal-delay-1">
-            <p>
-              I am currently studying Cyber Security at Buckinghamshire New University, covering topics such as network systems, data management, malware, online risks, and common security threats.
-            </p>
-            <p>
-              Outside university, I work on practical computing projects. I have built a full desktop PC from individual components, hosted private services from home, experimented with remote access, and created websites using HTML, CSS, and JavaScript.
-            </p>
-            <p>
-              I also studied IT and Computer Science at school, Games Design Level 2, and T-Level Digital Production, Design and Development. Those courses helped me build a foundation in Python, C#, SQL, problem solving, and software design.
-            </p>
-          </article>
-
-          <aside class="detail-list reveal reveal-delay-2">
-            <article>
-              <span>How I learn</span>
-              <p>Build it, test it, break it safely, then fix it properly.</p>
-            </article>
-            <article>
-              <span>Personal detail</span>
-              <p>Cat person, home-server tinkerer, and long-term computer enthusiast.</p>
-            </article>
-            <article>
-              <span>What I value</span>
-              <p>Clear systems, useful documentation, and technology that solves a real problem.</p>
-            </article>
-          </aside>
-        </div>
-      </section>
-
-      <section id="projects" class="section">
-        <div class="content-grid section-heading reveal">
-          <p class="section-number">02 / Projects</p>
-          <div>
-            <h2>Selected projects with specific technical context.</h2>
-            <p>
-              The main project is shown larger because it best represents the work I enjoy: configuring useful services, making them accessible, and considering security and reliability.
-            </p>
-          </div>
-        </div>
-
-        <div class="content-grid project-layout">
-          <article class="project-feature reveal reveal-delay-1">
-            <p class="section-kicker">Primary project</p>
-            <h3>Nextcloud self-hosted server</h3>
-            <p>
-              Built and hosted a private cloud storage service using Nextcloud and Docker on personal hardware. The project helped me understand container setup, storage planning, user access, networking, remote connectivity with Tailscale, and the security trade-offs between private VPN access and public port forwarding.
-            </p>
-
-            <ul class="tag-list" aria-label="Technologies used">
-              <li>Nextcloud</li>
-              <li>Docker</li>
-              <li>Tailscale</li>
-              <li>Networking</li>
-              <li>Remote access</li>
-            </ul>
-
-            <pre class="workflow-box"><span>workflow</span>
-plan storage and access model
-deploy service with Docker
-connect remotely with Tailscale
-test access from outside the home network
-review security before exposing anything publicly</pre>
-          </article>
-
-          <div class="project-stack">
-            <article class="project-card reveal reveal-delay-2">
-              <h3>Jellyfin media server</h3>
-              <p>Set up a home media server to remotely access films, shows, and books from my own devices, improving my understanding of accounts, libraries, local services, and network access.</p>
-              <ul class="tag-list"><li>Jellyfin</li><li>Home server</li><li>Linux</li></ul>
-            </article>
-
-            <article class="project-card reveal reveal-delay-2">
-              <h3>Custom PC build</h3>
-              <p>Assembled a full computer from parts, including CPU, GPU, cooling, storage, power, front-panel connectors, and cable management.</p>
-              <ul class="tag-list"><li>Hardware</li><li>Troubleshooting</li><li>Setup</li></ul>
-            </article>
-
-            <article class="project-card reveal reveal-delay-3">
-              <h3>Web design and development</h3>
-              <p>Built multiple websites with HTML, CSS, and JavaScript, supported by work experience involving debugging, QA checks, documentation, and web maintenance.</p>
-              <ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="skills" class="section">
-        <div class="content-grid section-heading reveal">
-          <p class="section-number">03 / Skills</p>
-          <div>
-            <h2>Skills grouped by how I actually use them.</h2>
-            <p>
-              These groups separate what I study, what I build with, and how I work with other people.
-            </p>
-          </div>
-        </div>
-
-        <div class="content-grid skills-layout">
-          <aside class="skills-note reveal reveal-delay-1">
-            I am strongest when a task involves understanding a system, following the problem carefully, and improving it step by step.
-          </aside>
-
-          <div class="skills-list">
-            <article class="skill-row reveal reveal-delay-1">
-              <h3>Systems and security</h3>
-              <p>Networking fundamentals, malware concepts, online risks, data management, self-hosting, remote access.</p>
-            </article>
-            <article class="skill-row reveal reveal-delay-2">
-              <h3>Code and web</h3>
-              <p>Python, HTML, CSS, JavaScript, SQL, C#, C, C++.</p>
-            </article>
-            <article class="skill-row reveal reveal-delay-3">
-              <h3>Working style</h3>
-              <p>Teamwork, communication, organisation, problem solving, documentation, time management.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="experience" class="section">
-        <div class="content-grid section-heading reveal">
-          <p class="section-number">04 / Experience</p>
-          <div>
-            <h2>Education and relevant experience.</h2>
-            <p>A timeline focused on computing, web development, software, and technical learning.</p>
-          </div>
-        </div>
-
-        <div class="content-grid">
-          <div class="timeline">
-            <article class="timeline-item reveal reveal-delay-1">
-              <time>2023 - Current</time>
-              <div>
-                <h3>Cyber Security, Buckinghamshire New University</h3>
-                <p>Studying network systems, data management, malware, online activity risks, and cyber security threats.</p>
-              </div>
-            </article>
-            <article class="timeline-item reveal reveal-delay-2">
-              <time>2021 - 2023</time>
-              <div>
-                <h3>T-Level Digital Production, Design and Development</h3>
-                <p>Studied problem solving, data, Python programming, C# programming, SQL, and software design at Bucks College Group.</p>
-              </div>
-            </article>
-            <article class="timeline-item reveal reveal-delay-2">
-              <time>Oct 2022 - Nov 2022</time>
-              <div>
-                <h3>Web Developer Assistant, ExcellOne Technologies Ltd</h3>
-                <p>Supported website and web application development through coding, debugging, quality assurance checks, planning, documentation, and technical problem solving.</p>
-              </div>
-            </article>
-            <article class="timeline-item reveal reveal-delay-3">
-              <time>2020 - 2021</time>
-              <div>
-                <h3>Games Design Level 2, Bucks College Group</h3>
-                <p>Completed a games design course focused on visual detail, design work, and consistent attendance.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section">
-        <div class="content-grid section-heading reveal">
-          <p class="section-number">05 / Contact</p>
-          <div>
-            <h2>Contact and links.</h2>
-            <p>Open to entry-level IT, technical support, cyber security, web development, and placement opportunities.</p>
-          </div>
-        </div>
-
-        <div class="content-grid contact-layout">
-          <article class="contact-panel reveal reveal-delay-1">
-            <h3>Based in Aylesbury, UK.</h3>
-            <p>
-              I am interested in roles where I can keep developing practical technical skills, support users, work with systems, and grow into a stronger IT or cyber security professional.
-            </p>
-
-            <div class="button-row">
-              <a class="button button--primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=tiberiumtoma%40gmail.com&su=Portfolio%20Contact&body=Hi%20Tibi%2C%0A%0AI%20found%20your%20portfolio%20and%20wanted%20to%20contact%20you." target="_blank" rel="noopener noreferrer">Email me</a>
-              <button class="button" type="button" data-open-cv>View CV</button>
-            </div>
-          </article>
-
-          <aside class="contact-links reveal reveal-delay-2">
-            <a href="https://github.com/TibsT1" target="_blank" rel="noopener noreferrer">
-              <span>GitHub</span>
-              <strong>@TibsT1</strong>
-            </a>
-            <a href="https://www.linkedin.com/in/tiberiu-mihai-toma-788a03307/" target="_blank" rel="noopener noreferrer">
-              <span>LinkedIn</span>
-              <strong>Tiberiu Mihai Toma</strong>
-            </a>
-            <a href="mailto:tiberiumtoma@gmail.com">
-              <span>Email</span>
-              <strong>tiberiumtoma@gmail.com</strong>
-            </a>
-            <p>
-              <span>Languages</span>
-              <strong>Romanian, English, Spanish</strong>
-            </p>
-          </aside>
-        </div>
-      </section>
-
-      <footer class="site-footer">
-        <div class="content-grid">
-          <p>© <span id="year"></span> Tiberiu Mihai Toma.</p>
-          <a href="#top">Back to top</a>
-        </div>
-      </footer>
-    </main>
-  </div>
-
-  <button class="scroll-top" type="button" aria-label="Scroll to top">↑</button>
-
-  <div class="cv-modal" role="dialog" aria-modal="true" aria-label="CV viewer" aria-hidden="true">
-    <div class="cv-modal__card">
-      <div class="cv-modal__header">
-        <strong>Tiberiu Mihai Toma CV</strong>
+      <dl>
         <div>
-          <a class="icon-button" href="assets/documents/cv.html" target="_blank" rel="noopener noreferrer" aria-label="Open CV in a new tab">↗</a>
-          <button class="icon-button" type="button" data-close-cv aria-label="Close CV viewer">×</button>
+          <dt>Degree</dt>
+          <dd>BSc Cyber Security, 2:1, 69%</dd>
         </div>
-      </div>
-      <iframe class="cv-modal__frame" src="assets/documents/cv.html" title="Tiberiu Mihai Toma CV"></iframe>
+        <div>
+          <dt>Current focus</dt>
+          <dd>Entry-level IT support, cyber security, infrastructure and web roles</dd>
+        </div>
+        <div>
+          <dt>Recent work</dt>
+          <dd>Tibs Diagnostic Toolkit, ValuTints website, Nextcloud homelab, Jellyfin media server</dd>
+        </div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="page-section section-divider">
+  <div class="layout section-heading reveal">
+    <p class="section-index">Overview</p>
+    <div>
+      <h2>A portfolio focused on real workflows, not placeholder features.</h2>
+      <p>
+        The site is split into separate pages so each section has room to explain what I built, what tools I used and what each project demonstrates.
+      </p>
     </div>
   </div>
 
+  <div class="layout card-grid card-grid--three">
+    <article class="card reveal reveal-delay-1">
+      <h3>Systems and support</h3>
+      <p>Network checks, local diagnostics, troubleshooting reports, remote access and first-line IT workflows.</p>
+      <a href="projects.html">Read project details</a>
+    </article>
+
+    <article class="card reveal reveal-delay-2">
+      <h3>Web development</h3>
+      <p>Static websites, service pages, contact flows, responsive layouts and client-focused content organisation.</p>
+      <a href="projects.html#valutints">View ValuTints</a>
+    </article>
+
+    <article class="card reveal reveal-delay-3">
+      <h3>Self-hosting</h3>
+      <p>Nextcloud, Docker, Tailscale, Jellyfin, private storage, media access and home-server configuration.</p>
+      <a href="projects.html#nextcloud">View homelab work</a>
+    </article>
+  </div>
+</section>
+
+  </main>
+  
+<footer class="site-footer">
+  <div>
+    <p>© <span id="year"></span> Tiberiu Mihai Toma.</p>
+    <p>Built as a static portfolio with HTML, CSS and JavaScript.</p>
+  </div>
+  <nav aria-label="Footer links">
+    <a href="https://github.com/TibsT1" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://www.linkedin.com/in/tiberiu-mihai-toma-788a03307/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="mailto:tiberiumtoma@gmail.com">Email</a>
+  </nav>
+</footer>
+
+  <button class="scroll-top" type="button" aria-label="Scroll to top">Back to top</button>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>

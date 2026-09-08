@@ -1,42 +1,81 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page="404">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page not found | Tiberiu Mihai Toma</title>
   <meta name="description" content="The requested portfolio page could not be found.">
+  <meta name="author" content="Tiberiu Mihai Toma">
+  <meta property="og:title" content="Page not found | Tiberiu Mihai Toma">
+  <meta property="og:description" content="The requested portfolio page could not be found.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tibst1.github.io/tibs-portfolio/">
+  <link rel="canonical" href="https://tibst1.github.io/tibs-portfolio/">
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
   <link rel="stylesheet" href="assets/css/main.css">
+  <script>document.documentElement.dataset.page = "404";</script>
 </head>
 <body>
-  <main class="not-found-page">
-    <section class="not-found-card">
-      <p class="section-kicker">404</p>
-      <h1>Page not found.</h1>
-      <p class="intro-text">The link you opened does not match a page in this portfolio.</p>
-      <a class="button button--primary" href="./">Return to portfolio</a>
-    </section>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Tiberiu Mihai Toma home">
+    <img src="assets/icons/logo.svg" alt="" class="brand__mark">
+    <span>
+      <strong>Tibi Toma</strong>
+      <small>Technical Portfolio</small>
+    </span>
+  </a>
+
+  <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">
+    Menu
+  </button>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <span class="site-nav__indicator" aria-hidden="true"></span>
+    <a href="index.html" data-page="home">Home</a>
+    <a href="about.html" data-page="about">About</a>
+    <a href="projects.html" data-page="projects">Projects</a>
+    <a href="skills.html" data-page="skills">Skills</a>
+    <a href="experience.html" data-page="experience">Experience</a>
+    <a href="contact.html" data-page="contact">Contact</a>
+  </nav>
+
+  <button class="theme-button" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
+    <span>Theme</span>
+    <span class="theme-button__switch" aria-hidden="true"></span>
+  </button>
+</header>
+
+  <main id="main-content">
+    
+<section class="not-found page-section">
+  <article class="card reveal is-visible">
+    <p class="eyebrow">404</p>
+    <h1>Page not found.</h1>
+    <p class="lead">The link you opened does not match a page in this portfolio.</p>
+    <div class="action-row">
+      <a class="button button--primary" href="index.html">Return home</a>
+      <a class="button" href="projects.html">View projects</a>
+    </div>
+  </article>
+</section>
+
   </main>
+  
+<footer class="site-footer">
+  <div>
+    <p>© <span id="year"></span> Tiberiu Mihai Toma.</p>
+    <p>Built as a static portfolio with HTML, CSS and JavaScript.</p>
+  </div>
+  <nav aria-label="Footer links">
+    <a href="https://github.com/TibsT1" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://www.linkedin.com/in/tiberiu-mihai-toma-788a03307/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="mailto:tiberiumtoma@gmail.com">Email</a>
+  </nav>
+</footer>
 
-  <style>
-    .not-found-page {
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: var(--space-5);
-    }
-
-    .not-found-card {
-      width: min(680px, 100%);
-      padding: var(--space-7);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-3);
-      background: var(--surface);
-    }
-
-    .not-found-card .button {
-      margin-top: var(--space-6);
-    }
-  </style>
+  <button class="scroll-top" type="button" aria-label="Scroll to top">Back to top</button>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

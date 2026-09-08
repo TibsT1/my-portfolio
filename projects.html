@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en" data-page="projects">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Tiberiu Mihai Toma</title>
+  <meta name="description" content="Selected projects by Tiberiu Mihai Toma, including Tibs Diagnostic Toolkit, ValuTints, Nextcloud, Jellyfin and hardware work.">
+  <meta name="author" content="Tiberiu Mihai Toma">
+  <meta property="og:title" content="Projects | Tiberiu Mihai Toma">
+  <meta property="og:description" content="Selected projects by Tiberiu Mihai Toma, including Tibs Diagnostic Toolkit, ValuTints, Nextcloud, Jellyfin and hardware work.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tibst1.github.io/tibs-portfolio/">
+  <link rel="canonical" href="https://tibst1.github.io/tibs-portfolio/">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>document.documentElement.dataset.page = "projects";</script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Tiberiu Mihai Toma home">
+    <img src="assets/icons/logo.svg" alt="" class="brand__mark">
+    <span>
+      <strong>Tibi Toma</strong>
+      <small>Technical Portfolio</small>
+    </span>
+  </a>
+
+  <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">
+    Menu
+  </button>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <span class="site-nav__indicator" aria-hidden="true"></span>
+    <a href="index.html" data-page="home">Home</a>
+    <a href="about.html" data-page="about">About</a>
+    <a href="projects.html" data-page="projects">Projects</a>
+    <a href="skills.html" data-page="skills">Skills</a>
+    <a href="experience.html" data-page="experience">Experience</a>
+    <a href="contact.html" data-page="contact">Contact</a>
+  </nav>
+
+  <button class="theme-button" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
+    <span>Theme</span>
+    <span class="theme-button__switch" aria-hidden="true"></span>
+  </button>
+</header>
+
+  <main id="main-content">
+    
+<section class="page-hero">
+  <div class="layout narrow reveal is-visible">
+    <p class="eyebrow">Projects</p>
+    <h1>Selected work with enough detail to show the actual build.</h1>
+    <p class="lead">
+      These are the projects that best show my current direction: troubleshooting tools, self-hosted systems, real websites and technical experiments.
+    </p>
+  </div>
+</section>
+
+<section id="diagnostic-toolkit" class="project-detail page-section">
+  <div class="layout project-detail__layout">
+    <aside class="project-meta reveal">
+      <p>Primary project</p>
+      <a href="https://github.com/TibsT1/tibs-diagnostic-toolkit" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+    </aside>
+
+    <article class="project-body reveal reveal-delay-1">
+      <h2>Tibs Diagnostic Toolkit</h2>
+      <p>
+        A lightweight cross-platform Python CLI for first-line IT troubleshooting. It is designed to collect useful checks quickly, save timestamped reports, and help separate basic connectivity issues from deeper problems that need further investigation.
+      </p>
+
+      <div class="detail-columns">
+        <div>
+          <h3>What it checks</h3>
+          <ul>
+            <li>Direct internet reachability without relying only on DNS</li>
+            <li>DNS resolution</li>
+            <li>Local IPv4 and default gateway detection where available</li>
+            <li>Latency, packet loss, system, CPU, RAM and storage information</li>
+            <li>Website and server reachability for common port patterns</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>What it demonstrates</h3>
+          <ul>
+            <li>Python standard library usage</li>
+            <li>Cross-platform checks for Windows, Linux and Android Termux</li>
+            <li>Report generation and file handling</li>
+            <li>Defensive handling of missing commands and restricted APIs</li>
+            <li>Testing and hardening through regression tests</li>
+          </ul>
+        </div>
+      </div>
+
+      <pre class="code-panel">python main.py
+python -m unittest discover -s tests -v
+build_windows_exe.bat</pre>
+    </article>
+  </div>
+</section>
+
+<section id="valutints" class="project-detail page-section section-divider">
+  <div class="layout project-detail__layout">
+    <aside class="project-meta reveal">
+      <p>Client / family business project</p>
+      <a href="https://valutints.co.uk" target="_blank" rel="noopener noreferrer">Live website</a>
+      <a href="https://github.com/TibsT1/valu-tints-website-previews" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+    </aside>
+
+    <article class="project-body reveal reveal-delay-1">
+      <h2>ValuTints website</h2>
+      <p>
+        A static business website for a car wrapping and window tinting company. The project involved organising service information, structuring multiple pages, adding direct contact paths, using supplied vehicle and workshop images, and preparing the site for deployment to the live business domain.
+      </p>
+
+      <div class="detail-columns">
+        <div>
+          <h3>Work included</h3>
+          <ul>
+            <li>Homepage, about, services, gallery, contact and 404 pages</li>
+            <li>Responsive navigation and mobile checks</li>
+            <li>Contact form planning with success and failure feedback</li>
+            <li>Logo, favicon, social links, sitemap and robots file</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>What it demonstrates</h3>
+          <ul>
+            <li>Client-focused content organisation</li>
+            <li>Multi-page static website structure</li>
+            <li>Front-end implementation with HTML, CSS and JavaScript</li>
+            <li>Deployment preparation and handover documentation</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="nextcloud" class="project-detail page-section section-divider">
+  <div class="layout project-detail__layout">
+    <aside class="project-meta reveal">
+      <p>Self-hosting / dissertation project</p>
+    </aside>
+
+    <article class="project-body reveal reveal-delay-1">
+      <h2>Nextcloud self-hosted server</h2>
+      <p>
+        Built a private cloud storage setup using Nextcloud and Docker on personal hardware. The project helped me understand container deployment, storage planning, user access, backup thinking, local network configuration and remote access options.
+      </p>
+
+      <div class="detail-columns">
+        <div>
+          <h3>Tools and concepts</h3>
+          <ul>
+            <li>Docker and containerised services</li>
+            <li>Nextcloud for private cloud storage</li>
+            <li>Tailscale for private remote access</li>
+            <li>Port forwarding as a comparison point for public exposure</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>What I learned</h3>
+          <ul>
+            <li>How self-hosted services are configured and maintained</li>
+            <li>Why remote access choices affect security</li>
+            <li>How documentation matters when rebuilding or troubleshooting</li>
+            <li>How home infrastructure can support a real academic project</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="page-section section-divider">
+  <div class="layout card-grid card-grid--three">
+    <article class="card reveal">
+      <h2>Jellyfin media server</h2>
+      <p>Configured a home media server to access films, shows and books stored on personal devices, strengthening my understanding of accounts, media libraries and network access.</p>
+    </article>
+
+    <article class="card reveal reveal-delay-1">
+      <h2>Custom PC build</h2>
+      <p>Assembled a full desktop PC from parts, including CPU, GPU, cooling, storage, power, front-panel connectors and cable management.</p>
+    </article>
+
+    <article class="card reveal reveal-delay-2">
+      <h2>Current experiments</h2>
+      <p>Exploring small tools and app ideas around public-network safety, diagnostics, small game simulations and practical support workflows.</p>
+    </article>
+  </div>
+</section>
+
+  </main>
+  
+<footer class="site-footer">
+  <div>
+    <p>© <span id="year"></span> Tiberiu Mihai Toma.</p>
+    <p>Built as a static portfolio with HTML, CSS and JavaScript.</p>
+  </div>
+  <nav aria-label="Footer links">
+    <a href="https://github.com/TibsT1" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://www.linkedin.com/in/tiberiu-mihai-toma-788a03307/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="mailto:tiberiumtoma@gmail.com">Email</a>
+  </nav>
+</footer>
+
+  <button class="scroll-top" type="button" aria-label="Scroll to top">Back to top</button>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

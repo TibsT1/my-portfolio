@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tibst1.github.io/tibs-portfolio/sitemap.xml
