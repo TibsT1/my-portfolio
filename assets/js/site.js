@@ -9,6 +9,17 @@ const scrollTopButton = document.querySelector(".scroll-top");
 const revealItems = document.querySelectorAll(".reveal");
 const cvLinks = document.querySelectorAll("[data-cv-link]");
 
+const safeStorage = {
+  get(key) {
+    try { return window.localStorage.getItem(key); }
+    catch { return null; }
+  },
+  set(key, value) {
+    try { window.localStorage.setItem(key, value); }
+    catch { /* storage can be unavailable in some preview contexts */ }
+  }
+};
+
 function easeOutQuart(value) {
   return 1 - Math.pow(1 - value, 4);
 }
@@ -21,11 +32,24 @@ function smoothScrollTo(targetY, duration = 760) {
   function frame(now) {
     const progress = Math.min((now - startTime) / duration, 1);
     window.scrollTo(0, startY + distance * easeOutQuart(progress));
-
     if (progress < 1) requestAnimationFrame(frame);
   }
 
   requestAnimationFrame(frame);
+}
+
+function openMenu() {
+  if (!nav || !menuToggle) return;
+  nav.classList.add("is-open");
+  menuToggle.setAttribute("aria-expanded", "true");
+  menuToggle.textContent = "Close";
+}
+
+function closeMenu() {
+  if (!nav || !menuToggle) return;
+  nav.classList.remove("is-open");
+  menuToggle.setAttribute("aria-expanded", "false");
+  menuToggle.textContent = "Menu";
 }
 
 function updateCvLinks() {
@@ -48,7 +72,7 @@ function updateActiveNav() {
     link.classList.toggle("active", link === active);
   });
 
-  if (!active || !navIndicator || window.innerWidth <= 980) {
+  if (!active || !navIndicator || window.innerWidth <= 900) {
     if (navIndicator) navIndicator.style.opacity = "0";
     return;
   }
@@ -64,47 +88,54 @@ function updateActiveNav() {
 function setTheme(isLight) {
   body.classList.toggle("light-mode", isLight);
   themeToggle?.setAttribute("aria-pressed", String(isLight));
-  localStorage.setItem("tibi-portfolio-theme", isLight ? "light" : "dark");
+  safeStorage.set("tibi-portfolio-theme", isLight ? "light" : "dark");
 }
 
-if (localStorage.getItem("tibi-portfolio-theme") === "light") {
+if (safeStorage.get("tibi-portfolio-theme") === "light") {
   setTheme(true);
 }
 
 themeToggle?.addEventListener("click", () => {
   const shouldUseLight = !body.classList.contains("light-mode");
-
   themeWipe?.classList.remove("is-active");
   void themeWipe?.offsetWidth;
   themeWipe?.classList.add("is-active");
-
   window.setTimeout(() => setTheme(shouldUseLight), 210);
 });
 
-menuToggle?.addEventListener("click", () => {
-  const isOpen = nav.classList.toggle("is-open");
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
-  menuToggle.textContent = isOpen ? "Close" : "Menu";
+menuToggle?.addEventListener("click", (event) => {
+  event.stopPropagation();
+  if (nav?.classList.contains("is-open")) closeMenu();
+  else openMenu();
+});
+
+nav?.addEventListener("click", (event) => {
+  event.stopPropagation();
 });
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     link.classList.add("is-clicked");
     window.setTimeout(() => link.classList.remove("is-clicked"), 240);
-
-    if (nav.classList.contains("is-open")) {
-      nav.classList.remove("is-open");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.textContent = "Menu";
-    }
+    closeMenu();
   });
+});
+
+document.addEventListener("click", (event) => {
+  if (window.innerWidth > 900) return;
+  if (!nav?.classList.contains("is-open")) return;
+  if (event.target.closest(".site-header")) return;
+  closeMenu();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeMenu();
 });
 
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {
     const target = document.querySelector(link.getAttribute("href"));
     if (!target) return;
-
     event.preventDefault();
     smoothScrollTo(target.getBoundingClientRect().top + window.scrollY, 760);
   });
@@ -128,21 +159,15 @@ scrollTopButton?.addEventListener("click", () => smoothScrollTo(0, 760));
 
 window.addEventListener("scroll", updateScrollButton, { passive: true });
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 980 && nav?.classList.contains("is-open")) {
-    nav.classList.remove("is-open");
-    menuToggle?.setAttribute("aria-expanded", "false");
-    if (menuToggle) menuToggle.textContent = "Menu";
-  }
+  if (window.innerWidth > 900) closeMenu();
   updateActiveNav();
 });
-
 window.addEventListener("load", () => {
   updateActiveNav();
   window.setTimeout(updateActiveNav, 120);
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();
-
 updateCvLinks();
 updateActiveNav();
 updateScrollButton();
