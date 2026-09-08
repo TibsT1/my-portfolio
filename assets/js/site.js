@@ -1,7 +1,7 @@
 const body = document.body;
 const nav = document.querySelector(".site-nav");
 const navLinks = document.querySelectorAll(".site-nav a");
-const navHighlight = document.querySelector(".nav-highlight");
+const navIndicator = document.querySelector(".nav-indicator");
 const menuToggle = document.querySelector(".menu-toggle");
 const themeToggle = document.querySelector(".theme-toggle");
 const themeWipe = document.querySelector(".theme-wipe");
@@ -28,22 +28,22 @@ function smoothScrollTo(targetY, duration = 760) {
   requestAnimationFrame(frame);
 }
 
-function updateNavHighlight() {
-  const currentPage = document.documentElement.dataset.page;
-  const activeLink = document.querySelector(`.site-nav a[data-page="${currentPage}"]`);
+function updateActiveNav() {
+  const page = document.documentElement.dataset.page;
+  const active = document.querySelector(`.site-nav a[data-page="${page}"]`);
 
   navLinks.forEach((link) => {
-    link.classList.toggle("active", link === activeLink);
+    link.classList.toggle("active", link === active);
   });
 
-  if (!activeLink || !navHighlight || window.innerWidth <= 960) return;
+  if (!active || !navIndicator || window.innerWidth <= 960) return;
 
   const navRect = nav.getBoundingClientRect();
-  const linkRect = activeLink.getBoundingClientRect();
+  const linkRect = active.getBoundingClientRect();
 
-  navHighlight.style.width = `${linkRect.width}px`;
-  navHighlight.style.transform = `translate(${linkRect.left - navRect.left}px, -50%)`;
-  navHighlight.style.opacity = "1";
+  navIndicator.style.width = `${linkRect.width}px`;
+  navIndicator.style.transform = `translate(${linkRect.left - navRect.left}px, -50%)`;
+  navIndicator.style.opacity = "1";
 }
 
 function setTheme(isLight) {
@@ -57,13 +57,13 @@ if (localStorage.getItem("tibi-portfolio-theme") === "light") {
 }
 
 themeToggle?.addEventListener("click", () => {
-  const shouldBeLight = !body.classList.contains("light-mode");
+  const shouldUseLight = !body.classList.contains("light-mode");
 
   themeWipe?.classList.remove("is-active");
   void themeWipe?.offsetWidth;
   themeWipe?.classList.add("is-active");
 
-  window.setTimeout(() => setTheme(shouldBeLight), 210);
+  window.setTimeout(() => setTheme(shouldUseLight), 210);
 });
 
 menuToggle?.addEventListener("click", () => {
@@ -112,9 +112,10 @@ function updateScrollButton() {
 scrollTopButton?.addEventListener("click", () => smoothScrollTo(0, 760));
 
 window.addEventListener("scroll", updateScrollButton, { passive: true });
-window.addEventListener("resize", updateNavHighlight);
+window.addEventListener("resize", updateActiveNav);
+window.addEventListener("load", updateActiveNav);
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-updateNavHighlight();
+updateActiveNav();
 updateScrollButton();

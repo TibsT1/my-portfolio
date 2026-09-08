@@ -4,31 +4,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects | Tiberiu Mihai Toma</title>
-  <meta name="description" content="Selected projects by Tiberiu Mihai Toma, including Tibs Diagnostic Toolkit, ValuTints, Nextcloud, Jellyfin and hardware work.">
+  <meta name="description" content="Selected projects by Tiberiu Mihai Toma, including Tibs Diagnostic Toolkit, ValuTints, Nextcloud, Jellyfin and custom PC building.">
   <meta name="author" content="Tiberiu Mihai Toma">
   <meta property="og:title" content="Projects | Tiberiu Mihai Toma">
-  <meta property="og:description" content="Selected projects by Tiberiu Mihai Toma, including Tibs Diagnostic Toolkit, ValuTints, Nextcloud, Jellyfin and hardware work.">
+  <meta property="og:description" content="Selected projects by Tiberiu Mihai Toma, including Tibs Diagnostic Toolkit, ValuTints, Nextcloud, Jellyfin and custom PC building.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tibst1.github.io/tibs-portfolio/">
   <link rel="canonical" href="https://tibst1.github.io/tibs-portfolio/">
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
   
 <header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="Tiberiu Mihai Toma home">
+  <div class="container header-grid">
+    <a class="brand" href="index.html" aria-label="Tibi Toma home">
       <span class="brand-mark" aria-hidden="true">TT</span>
-      <span class="brand-text">
+      <span class="brand-copy">
         <strong>Tibi Toma</strong>
-        <small>Technical Portfolio</small>
+        <small>Cybersecurity graduate</small>
       </span>
     </a>
 
-    <nav class="site-nav" aria-label="Main navigation">
-      <span class="nav-highlight" aria-hidden="true"></span>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <span class="nav-indicator" aria-hidden="true"></span>
       <a href="index.html" data-page="home">Home</a>
 <a href="about.html" data-page="about">About</a>
 <a href="projects.html" data-page="projects" aria-current="page">Projects</a>
@@ -37,186 +37,196 @@
 <a href="contact.html" data-page="contact">Contact</a>
     </nav>
 
-    <div class="header-actions">
+    <div class="header-tools">
       <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
-        <span class="theme-label">Theme</span>
-        <span class="theme-switch" aria-hidden="true"></span>
+        <span class="theme-toggle__text">Theme</span>
+        <span class="theme-toggle__track" aria-hidden="true"></span>
       </button>
-
-      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
-        Menu
-      </button>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false">Menu</button>
     </div>
   </div>
 </header>
 
-
   <main id="main-content">
-    
-<section class="page-hero section-pad">
-  <div class="container narrow reveal is-visible">
-    <p class="eyebrow">Projects</p>
-    <h1>Selected work with specific technical context.</h1>
-    <p class="lead">
-      These projects show the type of work I enjoy: diagnosing systems, building useful services, designing websites and learning by doing.
-    </p>
-  </div>
-</section>
 
-<section id="diagnostic-toolkit" class="section-pad section-line">
-  <div class="container project-detail">
-    <aside class="project-meta reveal">
-      <p>Primary project</p>
-      <a href="https://github.com/TibsT1/tibs-diagnostic-toolkit" target="_blank" rel="noopener noreferrer">GitHub repository</a>
-    </aside>
-
-    <article class="project-panel reveal reveal-delay-1">
-      <h2>Tibs Diagnostic Toolkit</h2>
-      <p>
-        A cross-platform Python command-line tool for first-line IT troubleshooting. It collects common checks into timestamped reports so issues can be recorded clearly instead of guessed from memory.
-      </p>
-
-      <div class="detail-grid">
-        <div>
-          <h3>Checks included</h3>
-          <ul>
-            <li>Internet reachability</li>
-            <li>DNS resolution</li>
-            <li>Default gateway and IPv4 details where available</li>
-            <li>Latency and packet-loss checks</li>
-            <li>System, CPU, memory and storage information</li>
-            <li>Website and server reachability checks</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>What it demonstrates</h3>
-          <ul>
-            <li>Python scripting and file handling</li>
-            <li>Cross-platform defensive checks</li>
-            <li>Report generation</li>
-            <li>Testing and regression checking</li>
-            <li>Practical IT support thinking</li>
-          </ul>
+    <section class="page-intro">
+      <div class="container intro-grid">
+        <h1 class="reveal is-visible">Project pages written like case notes, not feature cards.</h1>
+        <div class="intro-copy reveal reveal-delay-1">
+          <p>
+            Each project below explains what I was trying to build, what I used and what the project proves about my technical ability.
+          </p>
         </div>
       </div>
-    </article>
-  </div>
-</section>
+    </section>
 
-<section id="valutints" class="section-pad section-line">
-  <div class="container project-detail">
-    <aside class="project-meta reveal">
-      <p>Website project</p>
-      <a href="https://valutints.co.uk" target="_blank" rel="noopener noreferrer">Live website</a>
-      <a href="https://github.com/TibsT1/valu-tints-website-previews" target="_blank" rel="noopener noreferrer">GitHub repository</a>
-    </aside>
+    <section id="diagnostic-toolkit" class="case-study case-study--first">
+      <div class="container case-grid">
+        <aside class="case-index reveal">
+          <span>01</span>
+          <p>Python / IT support</p>
+          <a href="https://github.com/TibsT1/tibs-diagnostic-toolkit" target="_blank" rel="noopener noreferrer">Open GitHub</a>
+        </aside>
 
-    <article class="project-panel reveal reveal-delay-1">
-      <h2>ValuTints website</h2>
-      <p>
-        A static website for a car wrapping and window tinting business. The project focused on presenting real services clearly, creating direct contact paths, using business imagery properly and preparing the site for deployment.
-      </p>
+        <article class="case-body reveal reveal-delay-1">
+          <h2>Tibs Diagnostic Toolkit</h2>
+          <p>
+            I built this as a practical support tool rather than a portfolio decoration. The idea is simple: when a device or connection is acting up, run one tool, collect the basic facts and export a report that can be reviewed properly.
+          </p>
 
-      <div class="detail-grid">
-        <div>
-          <h3>Work included</h3>
-          <ul>
-            <li>Homepage, service pages, gallery, contact and 404 page</li>
-            <li>Responsive layout and mobile navigation</li>
-            <li>Contact form planning with feedback states</li>
-            <li>Favicon, metadata, sitemap, robots file and README</li>
-          </ul>
-        </div>
+          <div class="case-split">
+            <div>
+              <h3>What it does</h3>
+              <ul>
+                <li>Checks whether the internet is reachable without relying only on DNS.</li>
+                <li>Tests DNS resolution, latency and packet loss.</li>
+                <li>Detects local IPv4 and gateway details where the platform allows it.</li>
+                <li>Collects system information such as CPU, memory and storage details.</li>
+                <li>Creates timestamped reports for troubleshooting records.</li>
+              </ul>
+            </div>
 
-        <div>
-          <h3>What it demonstrates</h3>
-          <ul>
-            <li>HTML, CSS and JavaScript structure</li>
-            <li>Client-focused information design</li>
-            <li>Deployment preparation</li>
-            <li>Iterating from feedback</li>
-          </ul>
-        </div>
+            <div>
+              <h3>What it shows</h3>
+              <ul>
+                <li>Python scripting for a real support workflow.</li>
+                <li>Cross-platform thinking across Windows, Linux and Android Termux.</li>
+                <li>Testing discipline with regression, fuzz and concurrency checks.</li>
+                <li>Defensive programming when commands or permissions are missing.</li>
+              </ul>
+            </div>
+          </div>
+
+          <pre class="command-box">python main.py
+python -m unittest discover -s tests -v</pre>
+        </article>
       </div>
-    </article>
-  </div>
-</section>
+    </section>
 
-<section id="nextcloud" class="section-pad section-line">
-  <div class="container project-detail">
-    <aside class="project-meta reveal">
-      <p>Self-hosting</p>
-    </aside>
+    <section id="valutints" class="case-study">
+      <div class="container case-grid">
+        <aside class="case-index reveal">
+          <span>02</span>
+          <p>Live business site</p>
+          <a href="https://valutints.co.uk" target="_blank" rel="noopener noreferrer">Open site</a>
+        </aside>
 
-    <article class="project-panel reveal reveal-delay-1">
-      <h2>Nextcloud self-hosted server</h2>
-      <p>
-        Built a private cloud storage setup using Nextcloud and Docker on personal hardware. The project helped me understand container deployment, storage planning, user access, local network configuration and remote access options.
-      </p>
+        <article class="case-body reveal reveal-delay-1">
+          <h2>ValuTints website</h2>
+          <p>
+            This was a family business website, which meant the site had to be practical before anything else. Visitors needed to understand the services, see examples of the work and find a clear way to get in contact.
+          </p>
 
-      <div class="detail-grid">
-        <div>
-          <h3>Tools used</h3>
-          <ul>
-            <li>Nextcloud</li>
-            <li>Docker</li>
-            <li>Tailscale</li>
-            <li>Port forwarding concepts</li>
-          </ul>
-        </div>
+          <div class="case-split">
+            <div>
+              <h3>What I handled</h3>
+              <ul>
+                <li>Page structure for services, gallery content, contact and business information.</li>
+                <li>Responsive layout so the site works properly on phones and desktop screens.</li>
+                <li>Copy and contact flow organised around the actual business.</li>
+                <li>Iteration from feedback so the design stayed consistent across pages.</li>
+              </ul>
+            </div>
 
-        <div>
-          <h3>What I learned</h3>
-          <ul>
-            <li>How private services are configured</li>
-            <li>Why remote access choices affect security</li>
-            <li>How documentation helps with rebuilding and troubleshooting</li>
-          </ul>
-        </div>
+            <div>
+              <h3>Why it matters</h3>
+              <ul>
+                <li>It is a real website for real people, not a fake landing page.</li>
+                <li>It demonstrates HTML, CSS, JavaScript, deployment preparation and maintenance.</li>
+                <li>It gave me practice translating a business need into a usable site.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
       </div>
-    </article>
-  </div>
-</section>
+    </section>
 
-<section class="section-pad section-line">
-  <div class="container three-grid">
-    <article class="info-card reveal">
-      <h2>Jellyfin media server</h2>
-      <p>Configured a home media server to access films, shows and books stored on personal devices.</p>
-    </article>
-    <article class="info-card reveal reveal-delay-1">
-      <h2>Custom PC build</h2>
-      <p>Built a full desktop PC from parts, including CPU, GPU, cooling, storage, power and front-panel connectors.</p>
-    </article>
-    <article class="info-card reveal reveal-delay-2">
-      <h2>Current experiments</h2>
-      <p>Exploring small tools and app ideas around public-network safety, diagnostics, game simulations and practical support workflows.</p>
-    </article>
-  </div>
-</section>
+    <section id="nextcloud" class="case-study">
+      <div class="container case-grid">
+        <aside class="case-index reveal">
+          <span>03</span>
+          <p>Self-hosting</p>
+        </aside>
+
+        <article class="case-body reveal reveal-delay-1">
+          <h2>Nextcloud self-hosted server</h2>
+          <p>
+            I hosted a private cloud storage service using Nextcloud and Docker on my own hardware. The project fed into my dissertation work and taught me how different a system feels when I am responsible for access, storage and maintenance.
+          </p>
+
+          <div class="case-split">
+            <div>
+              <h3>What I worked with</h3>
+              <ul>
+                <li>Nextcloud for personal cloud storage.</li>
+                <li>Docker for service deployment.</li>
+                <li>Tailscale for private remote access.</li>
+                <li>Port forwarding as a comparison point for public exposure.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>What I learned</h3>
+              <ul>
+                <li>Remote access is a security decision, not just a convenience.</li>
+                <li>Documentation matters when rebuilding or debugging a service.</li>
+                <li>Self-hosting makes networking and storage concepts much more concrete.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--lined">
+      <div class="container lab-grid">
+        <article class="lab-card reveal">
+          <h2>Jellyfin media server</h2>
+          <p>Set up a home media server to access films, shows and books stored on my own devices. Useful for understanding user accounts, media libraries, network access and service reliability.</p>
+        </article>
+
+        <article class="lab-card reveal reveal-delay-1">
+          <h2>Custom PC build</h2>
+          <p>Built a full desktop from parts, including CPU, GPU, cooling, storage, power, motherboard connections and front-panel wiring.</p>
+        </article>
+
+        <article class="lab-card reveal reveal-delay-2">
+          <h2>Job tracker workflow</h2>
+          <p>Worked with structured CSV records for job applications, follow-ups, statuses and outreach notes. This helped turn a messy job search into something trackable.</p>
+        </article>
+
+        <article class="lab-card reveal">
+          <h2>Public-network safety app idea</h2>
+          <p>Explored a cross-platform concept for protecting devices on weak or public networks through local VPN-style filtering, safer DNS choices and clear status checks.</p>
+        </article>
+
+        <article class="lab-card reveal reveal-delay-1">
+          <h2>Two-ball arena simulator</h2>
+          <p>Experimented with a small game idea where different “fighters” have simple powers and simulated movement. Useful for practising game logic, menus and packaged Windows builds.</p>
+        </article>
+
+        <article class="lab-card reveal reveal-delay-2">
+          <h2>Portfolio rebuild</h2>
+          <p>This site itself is part of the work: cleaner file structure, separate pages, responsive navigation, custom 404, sitemap, robots file, CV page and deployable static assets.</p>
+        </article>
+      </div>
+    </section>
 
   </main>
-
   
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <div>
-      <p>© <span id="year"></span> Tiberiu Mihai Toma.</p>
-      <p class="footer-note">Static portfolio built with HTML, CSS and JavaScript.</p>
-    </div>
-
-    <nav aria-label="Footer links">
+  <div class="container footer-grid">
+    <p>© <span id="year"></span> Tiberiu Mihai Toma</p>
+    <div class="footer-links">
       <a href="https://github.com/TibsT1" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="https://www.linkedin.com/in/tiberiu-mihai-toma-788a03307/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="mailto:tiberiumtoma@gmail.com">Email</a>
-    </nav>
+    </div>
   </div>
 </footer>
 
-
-  <button class="scroll-top" type="button" aria-label="Scroll to top">Top</button>
+  <button class="scroll-top" type="button" aria-label="Scroll back to top">Top</button>
   <div class="theme-wipe" aria-hidden="true"></div>
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/site.js" defer></script>
 </body>
 </html>

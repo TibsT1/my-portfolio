@@ -4,31 +4,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | Tiberiu Mihai Toma</title>
-  <meta name="description" content="Contact links for Tiberiu Mihai Toma, including email, GitHub, LinkedIn and portfolio links.">
+  <meta name="description" content="Contact page for Tiberiu Mihai Toma with email, GitHub, LinkedIn and portfolio links.">
   <meta name="author" content="Tiberiu Mihai Toma">
   <meta property="og:title" content="Contact | Tiberiu Mihai Toma">
-  <meta property="og:description" content="Contact links for Tiberiu Mihai Toma, including email, GitHub, LinkedIn and portfolio links.">
+  <meta property="og:description" content="Contact page for Tiberiu Mihai Toma with email, GitHub, LinkedIn and portfolio links.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tibst1.github.io/tibs-portfolio/">
   <link rel="canonical" href="https://tibst1.github.io/tibs-portfolio/">
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
   
 <header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="Tiberiu Mihai Toma home">
+  <div class="container header-grid">
+    <a class="brand" href="index.html" aria-label="Tibi Toma home">
       <span class="brand-mark" aria-hidden="true">TT</span>
-      <span class="brand-text">
+      <span class="brand-copy">
         <strong>Tibi Toma</strong>
-        <small>Technical Portfolio</small>
+        <small>Cybersecurity graduate</small>
       </span>
     </a>
 
-    <nav class="site-nav" aria-label="Main navigation">
-      <span class="nav-highlight" aria-hidden="true"></span>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <span class="nav-indicator" aria-hidden="true"></span>
       <a href="index.html" data-page="home">Home</a>
 <a href="about.html" data-page="about">About</a>
 <a href="projects.html" data-page="projects">Projects</a>
@@ -37,93 +37,69 @@
 <a href="contact.html" data-page="contact" aria-current="page">Contact</a>
     </nav>
 
-    <div class="header-actions">
+    <div class="header-tools">
       <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
-        <span class="theme-label">Theme</span>
-        <span class="theme-switch" aria-hidden="true"></span>
+        <span class="theme-toggle__text">Theme</span>
+        <span class="theme-toggle__track" aria-hidden="true"></span>
       </button>
-
-      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
-        Menu
-      </button>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false">Menu</button>
     </div>
   </div>
 </header>
 
-
   <main id="main-content">
-    
-<section class="page-hero section-pad">
-  <div class="container narrow reveal is-visible">
-    <p class="eyebrow">Contact</p>
-    <h1>Contact and professional links.</h1>
-    <p class="lead">
-      Open to entry-level IT, technical support, cyber security, infrastructure and web development opportunities.
-    </p>
-  </div>
-</section>
 
-<section class="section-pad section-line">
-  <div class="container contact-grid">
-    <article class="contact-panel reveal">
-      <h2>Based in Aylesbury, UK.</h2>
-      <p>
-        I am also actively looking at opportunities connected to Portugal and am learning European Portuguese. I am interested in roles where I can support users, work with systems, document issues clearly and keep improving technically.
-      </p>
-
-      <div class="button-row">
-        <a class="button button-primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=tiberiumtoma%40gmail.com&su=Portfolio%20Contact&body=Hi%20Tibi%2C%0A%0AI%20found%20your%20portfolio%20and%20wanted%20to%20contact%20you." target="_blank" rel="noopener noreferrer">Email through Gmail</a>
-        <a class="button" href="mailto:tiberiumtoma@gmail.com">Email through mail app</a>
-        <a class="button" href="assets/documents/cv.html">View CV</a>
+    <section class="page-intro">
+      <div class="container intro-grid">
+        <h1 class="reveal is-visible">Contact, links and availability.</h1>
+        <div class="intro-copy reveal reveal-delay-1">
+          <p>
+            I am based in Aylesbury, UK, and I am also looking at opportunities connected to Portugal while learning European Portuguese.
+          </p>
+        </div>
       </div>
-    </article>
+    </section>
 
-    <aside class="contact-links reveal reveal-delay-1">
-      <a href="https://github.com/TibsT1" target="_blank" rel="noopener noreferrer">
-        <span>GitHub</span>
-        <strong>@TibsT1</strong>
-      </a>
-      <a href="https://www.linkedin.com/in/tiberiu-mihai-toma-788a03307/" target="_blank" rel="noopener noreferrer">
-        <span>LinkedIn</span>
-        <strong>Tiberiu Mihai Toma</strong>
-      </a>
-      <a href="https://tibst1.github.io/tibs-portfolio/" target="_blank" rel="noopener noreferrer">
-        <span>Portfolio</span>
-        <strong>tibst1.github.io/tibs-portfolio</strong>
-      </a>
-      <a href="https://valutints.co.uk" target="_blank" rel="noopener noreferrer">
-        <span>Website project</span>
-        <strong>valutints.co.uk</strong>
-      </a>
-      <a href="mailto:tiberiumtoma@gmail.com">
-        <span>Email</span>
-        <strong>tiberiumtoma@gmail.com</strong>
-      </a>
-    </aside>
-  </div>
-</section>
+    <section class="section section--lined">
+      <div class="container contact-layout">
+        <article class="contact-main reveal">
+          <h2>Best way to reach me</h2>
+          <p>
+            Email is best for job opportunities, project questions or anything related to my portfolio. I am interested in roles where I can support users, work with systems, document issues clearly and keep improving technically.
+          </p>
+
+          <div class="action-row">
+            <a class="button button--dark" href="https://mail.google.com/mail/?view=cm&fs=1&to=tiberiumtoma%40gmail.com&su=Portfolio%20Contact&body=Hi%20Tibi%2C%0A%0AI%20found%20your%20portfolio%20and%20wanted%20to%20contact%20you." target="_blank" rel="noopener noreferrer">Open Gmail draft</a>
+            <a class="button" href="mailto:tiberiumtoma@gmail.com">Use mail app</a>
+            <a class="button" href="assets/documents/cv.html">View CV</a>
+          </div>
+        </article>
+
+        <aside class="contact-list reveal reveal-delay-1">
+          <a href="mailto:tiberiumtoma@gmail.com"><span>Email</span><strong>tiberiumtoma@gmail.com</strong></a>
+          <a href="https://github.com/TibsT1" target="_blank" rel="noopener noreferrer"><span>GitHub</span><strong>github.com/TibsT1</strong></a>
+          <a href="https://www.linkedin.com/in/tiberiu-mihai-toma-788a03307/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>Tiberiu Mihai Toma</strong></a>
+          <a href="https://tibst1.github.io/tibs-portfolio/" target="_blank" rel="noopener noreferrer"><span>Portfolio</span><strong>tibst1.github.io/tibs-portfolio</strong></a>
+          <a href="https://valutints.co.uk" target="_blank" rel="noopener noreferrer"><span>Website project</span><strong>valutints.co.uk</strong></a>
+        </aside>
+      </div>
+    </section>
 
   </main>
-
   
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <div>
-      <p>© <span id="year"></span> Tiberiu Mihai Toma.</p>
-      <p class="footer-note">Static portfolio built with HTML, CSS and JavaScript.</p>
-    </div>
-
-    <nav aria-label="Footer links">
+  <div class="container footer-grid">
+    <p>© <span id="year"></span> Tiberiu Mihai Toma</p>
+    <div class="footer-links">
       <a href="https://github.com/TibsT1" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="https://www.linkedin.com/in/tiberiu-mihai-toma-788a03307/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="mailto:tiberiumtoma@gmail.com">Email</a>
-    </nav>
+    </div>
   </div>
 </footer>
 
-
-  <button class="scroll-top" type="button" aria-label="Scroll to top">Top</button>
+  <button class="scroll-top" type="button" aria-label="Scroll back to top">Top</button>
   <div class="theme-wipe" aria-hidden="true"></div>
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/site.js" defer></script>
 </body>
 </html>

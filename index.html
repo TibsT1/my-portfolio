@@ -3,32 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tiberiu Mihai Toma | Technical Portfolio</title>
-  <meta name="description" content="Technical portfolio for Tiberiu Mihai Toma, Cybersecurity Graduate focused on IT support, self-hosting, networking, web development and practical computing projects.">
+  <title>Tiberiu Mihai Toma | Portfolio</title>
+  <meta name="description" content="Portfolio for Tiberiu Mihai Toma, a Cybersecurity Graduate focused on IT support, diagnostics, self-hosting, web development and practical computing projects.">
   <meta name="author" content="Tiberiu Mihai Toma">
-  <meta property="og:title" content="Tiberiu Mihai Toma | Technical Portfolio">
-  <meta property="og:description" content="Technical portfolio for Tiberiu Mihai Toma, Cybersecurity Graduate focused on IT support, self-hosting, networking, web development and practical computing projects.">
+  <meta property="og:title" content="Tiberiu Mihai Toma | Portfolio">
+  <meta property="og:description" content="Portfolio for Tiberiu Mihai Toma, a Cybersecurity Graduate focused on IT support, diagnostics, self-hosting, web development and practical computing projects.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tibst1.github.io/tibs-portfolio/">
   <link rel="canonical" href="https://tibst1.github.io/tibs-portfolio/">
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
   
 <header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="Tiberiu Mihai Toma home">
+  <div class="container header-grid">
+    <a class="brand" href="index.html" aria-label="Tibi Toma home">
       <span class="brand-mark" aria-hidden="true">TT</span>
-      <span class="brand-text">
+      <span class="brand-copy">
         <strong>Tibi Toma</strong>
-        <small>Technical Portfolio</small>
+        <small>Cybersecurity graduate</small>
       </span>
     </a>
 
-    <nav class="site-nav" aria-label="Main navigation">
-      <span class="nav-highlight" aria-hidden="true"></span>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <span class="nav-indicator" aria-hidden="true"></span>
       <a href="index.html" data-page="home" aria-current="page">Home</a>
 <a href="about.html" data-page="about">About</a>
 <a href="projects.html" data-page="projects">Projects</a>
@@ -37,114 +37,113 @@
 <a href="contact.html" data-page="contact">Contact</a>
     </nav>
 
-    <div class="header-actions">
+    <div class="header-tools">
       <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
-        <span class="theme-label">Theme</span>
-        <span class="theme-switch" aria-hidden="true"></span>
+        <span class="theme-toggle__text">Theme</span>
+        <span class="theme-toggle__track" aria-hidden="true"></span>
       </button>
-
-      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
-        Menu
-      </button>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false">Menu</button>
     </div>
   </div>
 </header>
 
-
   <main id="main-content">
-    
-<section class="hero section-pad">
-  <div class="container hero-grid">
-    <div class="hero-copy reveal is-visible">
-      <p class="eyebrow">Cybersecurity Graduate · IT Support · Web Development</p>
-      <h1>Practical technical projects built around systems, support and security.</h1>
-      <p class="lead">
-        I’m Tiberiu Mihai Toma, usually Tibi. I graduated from Buckinghamshire New University with a BSc in Cyber Security, achieving Upper Second-Class Honours with 69%. I build practical projects around self-hosting, troubleshooting, networking, web development and everyday computing.
-      </p>
 
-      <div class="button-row">
-        <a class="button button-primary" href="projects.html">View projects</a>
-        <a class="button" href="assets/documents/cv.html">View CV</a>
-        <a class="button" href="https://mail.google.com/mail/?view=cm&fs=1&to=tiberiumtoma%40gmail.com&su=Portfolio%20Contact&body=Hi%20Tibi%2C%0A%0AI%20found%20your%20portfolio%20and%20wanted%20to%20contact%20you." target="_blank" rel="noopener noreferrer">Email me</a>
-      </div>
-    </div>
+    <section class="home-hero">
+      <div class="container home-hero__grid">
+        <div class="home-hero__copy reveal is-visible">
+          <h1>Tibi Toma builds tools, sites and home-lab systems from the ground up.</h1>
+          <p class="lead">
+            Cybersecurity graduate based in Aylesbury, aiming for junior IT, support, infrastructure, security and web roles. My work is practical: diagnostic scripts, self-hosted services, business websites, Packet Tracer networks and hardware builds.
+          </p>
 
-    <aside class="summary-card reveal reveal-delay-1">
-      <pre class="cat-art" aria-label="ASCII cat"> /\_/\
+          <div class="action-row">
+            <a class="button button--dark" href="projects.html">Open the workbench</a>
+            <a class="button" href="assets/documents/cv.html">Read the CV</a>
+            <a class="button" href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <aside class="desk-card reveal reveal-delay-1">
+          <pre class="cat-art" aria-label="ASCII cat"> /\_/\
 ( o.o )
  &gt; ^ &lt;</pre>
 
-      <dl class="facts-list">
+          <div class="desk-card__section">
+            <span>Graduate</span>
+            <p>BSc Cyber Security, 2:1, 69%</p>
+          </div>
+
+          <div class="desk-card__section">
+            <span>Best evidence</span>
+            <p>Tibs Diagnostic Toolkit, ValuTints, Nextcloud, Jellyfin and PC hardware work.</p>
+          </div>
+
+          <div class="desk-card__section">
+            <span>Looking for</span>
+            <p>Junior IT support, technical support, infrastructure, security or web development work.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--lined">
+      <div class="container bench-strip reveal">
         <div>
-          <dt>Degree</dt>
-          <dd>BSc Cyber Security, 2:1, 69%</dd>
+          <h2>Not a fake product page. A working record.</h2>
+          <p>
+            I rebuilt this around what I can actually discuss in an interview: what broke, what I tested, what I changed and what each project taught me.
+          </p>
         </div>
-        <div>
-          <dt>Current focus</dt>
-          <dd>Entry-level IT support, technical support, infrastructure, cyber security and web roles</dd>
+
+        <div class="bench-strip__steps">
+          <span>diagnose</span>
+          <span>host</span>
+          <span>build</span>
+          <span>document</span>
         </div>
-        <div>
-          <dt>Recent work</dt>
-          <dd>Tibs Diagnostic Toolkit, ValuTints website, Nextcloud server and Jellyfin media server</dd>
-        </div>
-      </dl>
-    </aside>
-  </div>
-</section>
+      </div>
+    </section>
 
-<section class="section-pad section-line">
-  <div class="container split-heading reveal">
-    <p class="section-number">Overview</p>
-    <div>
-      <h2>Not a template landing page. A clear record of what I build.</h2>
-      <p>
-        This portfolio is now split into proper pages, with focused project write-ups, a structured CV page, working navigation, a custom 404 page and stable responsive styling.
-      </p>
-    </div>
-  </div>
+    <section class="section">
+      <div class="container project-preview-grid">
+        <article class="project-preview project-preview--large reveal">
+          <h2>Tibs Diagnostic Toolkit</h2>
+          <p>
+            A Python command-line tool for first-line IT checks: internet reachability, DNS, gateway details, latency, packet loss, system information and exportable reports.
+          </p>
+          <a href="projects.html#diagnostic-toolkit">Read the case study</a>
+        </article>
 
-  <div class="container three-grid">
-    <article class="info-card reveal reveal-delay-1">
-      <h3>Technical troubleshooting</h3>
-      <p>Python diagnostic tooling, network checks, system reports, website reachability tests and support-focused workflows.</p>
-      <a href="projects.html#diagnostic-toolkit">Read about the toolkit</a>
-    </article>
+        <article class="project-preview reveal reveal-delay-1">
+          <h2>ValuTints</h2>
+          <p>Business website for a car wrapping and window tinting company, built around services, gallery content and contact flow.</p>
+          <a href="projects.html#valutints">View project</a>
+        </article>
 
-    <article class="info-card reveal reveal-delay-2">
-      <h3>Web development</h3>
-      <p>Static business websites, responsive pages, contact paths, deployment preparation and client-focused structure.</p>
-      <a href="projects.html#valutints">View ValuTints work</a>
-    </article>
-
-    <article class="info-card reveal reveal-delay-3">
-      <h3>Self-hosting</h3>
-      <p>Nextcloud, Docker, Tailscale, Jellyfin, home-server configuration, private access and remote connectivity.</p>
-      <a href="projects.html#nextcloud">View self-hosting work</a>
-    </article>
-  </div>
-</section>
+        <article class="project-preview reveal reveal-delay-2">
+          <h2>Home lab</h2>
+          <p>Nextcloud, Docker, Tailscale and Jellyfin projects used to learn remote access, private hosting and system maintenance.</p>
+          <a href="projects.html#nextcloud">View setup</a>
+        </article>
+      </div>
+    </section>
 
   </main>
-
   
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <div>
-      <p>© <span id="year"></span> Tiberiu Mihai Toma.</p>
-      <p class="footer-note">Static portfolio built with HTML, CSS and JavaScript.</p>
-    </div>
-
-    <nav aria-label="Footer links">
+  <div class="container footer-grid">
+    <p>© <span id="year"></span> Tiberiu Mihai Toma</p>
+    <div class="footer-links">
       <a href="https://github.com/TibsT1" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="https://www.linkedin.com/in/tiberiu-mihai-toma-788a03307/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="mailto:tiberiumtoma@gmail.com">Email</a>
-    </nav>
+    </div>
   </div>
 </footer>
 
-
-  <button class="scroll-top" type="button" aria-label="Scroll to top">Top</button>
+  <button class="scroll-top" type="button" aria-label="Scroll back to top">Top</button>
   <div class="theme-wipe" aria-hidden="true"></div>
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/site.js" defer></script>
 </body>
 </html>
