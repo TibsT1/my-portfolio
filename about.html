@@ -12,127 +12,125 @@
   <meta property="og:url" content="https://tibst1.github.io/tibs-portfolio/">
   <link rel="canonical" href="https://tibst1.github.io/tibs-portfolio/">
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <script>document.documentElement.dataset.page = "about";</script>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
   
 <header class="site-header">
-  <a class="brand" href="index.html" aria-label="Tiberiu Mihai Toma home">
-    <img src="assets/icons/logo.svg" alt="" class="brand__mark">
-    <span>
-      <strong>Tibi Toma</strong>
-      <small>Technical Portfolio</small>
-    </span>
-  </a>
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Tiberiu Mihai Toma home">
+      <span class="brand-mark" aria-hidden="true">TT</span>
+      <span class="brand-text">
+        <strong>Tibi Toma</strong>
+        <small>Technical Portfolio</small>
+      </span>
+    </a>
 
-  <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">
-    Menu
-  </button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <span class="nav-highlight" aria-hidden="true"></span>
+      <a href="index.html" data-page="home">Home</a>
+<a href="about.html" data-page="about" aria-current="page">About</a>
+<a href="projects.html" data-page="projects">Projects</a>
+<a href="skills.html" data-page="skills">Skills</a>
+<a href="experience.html" data-page="experience">Experience</a>
+<a href="contact.html" data-page="contact">Contact</a>
+    </nav>
 
-  <nav class="site-nav" aria-label="Main navigation">
-    <span class="site-nav__indicator" aria-hidden="true"></span>
-    <a href="index.html" data-page="home">Home</a>
-    <a href="about.html" data-page="about">About</a>
-    <a href="projects.html" data-page="projects">Projects</a>
-    <a href="skills.html" data-page="skills">Skills</a>
-    <a href="experience.html" data-page="experience">Experience</a>
-    <a href="contact.html" data-page="contact">Contact</a>
-  </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
+        <span class="theme-label">Theme</span>
+        <span class="theme-switch" aria-hidden="true"></span>
+      </button>
 
-  <button class="theme-button" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
-    <span>Theme</span>
-    <span class="theme-button__switch" aria-hidden="true"></span>
-  </button>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        Menu
+      </button>
+    </div>
+  </div>
 </header>
+
 
   <main id="main-content">
     
-<section class="page-hero">
-  <div class="layout narrow reveal is-visible">
+<section class="page-hero section-pad">
+  <div class="container narrow reveal is-visible">
     <p class="eyebrow">About</p>
-    <h1>Computer enthusiast, cybersecurity graduate and practical builder.</h1>
+    <h1>Cybersecurity graduate with a practical computing background.</h1>
     <p class="lead">
-      My background sits between formal cyber security study and hands-on technical projects. I like working through how systems are put together, why they fail, and how to make them easier to use or maintain.
+      My background combines academic cyber security study with hands-on projects that involve configuration, troubleshooting, documentation and real technical decision-making.
     </p>
   </div>
 </section>
 
-<section class="page-section">
-  <div class="layout editorial-grid">
-    <aside class="section-aside reveal">
-      <p>Background</p>
-    </aside>
-
-    <div class="copy-stack reveal reveal-delay-1">
+<section class="section-pad section-line">
+  <div class="container two-column">
+    <article class="copy-panel reveal">
+      <h2>Background</h2>
       <p>
-        I graduated from Buckinghamshire New University with a BSc in Cyber Security, achieving Upper Second-Class Honours with an overall result of 69%. My degree covered network systems, data management, malware, databases, online activity risks and cyber security threats.
+        I graduated from Buckinghamshire New University with a BSc in Cyber Security, achieving Upper Second-Class Honours with an overall result of 69%. My degree covered network systems, data management, databases, malware, online risks and security threats.
       </p>
       <p>
-        Before university, I studied T-Level Digital Production, Design and Development, Games Design Level 2, IT and Computer Science. That gave me a practical base in Python, C#, SQL, software design, digital design and problem solving.
+        Before university, I studied T-Level Digital Production, Design and Development, Games Design Level 2, IT and Computer Science. This gave me experience with Python, C#, SQL, software design and problem solving.
       </p>
       <p>
-        Outside coursework, I have built and maintained my own projects: a Nextcloud server, a Jellyfin media server, websites, a full desktop PC build, and a cross-platform Python diagnostic toolkit.
+        Outside coursework, I have worked on self-hosting, static websites, Python tools, custom PC building and server projects.
       </p>
-    </div>
-  </div>
-</section>
-
-<section class="page-section section-divider">
-  <div class="layout editorial-grid">
-    <aside class="section-aside reveal">
-      <p>How I work</p>
-    </aside>
-
-    <div class="principles reveal reveal-delay-1">
-      <article>
-        <h2>Start with the real problem.</h2>
-        <p>I prefer practical tasks where the goal is clear: make a service reachable, diagnose a connection issue, improve a website or document a setup so it can be repeated.</p>
-      </article>
-
-      <article>
-        <h2>Use tools carefully.</h2>
-        <p>My projects have involved Docker, Tailscale, Python, HTML, CSS, JavaScript, SQL, MongoDB basics, Linux, Windows and Android Termux. I try to understand the trade-offs instead of just copying commands.</p>
-      </article>
-
-      <article>
-        <h2>Keep learning visible.</h2>
-        <p>I like projects that produce something testable: a report, a hosted service, a working site, a local tool or a documented workflow.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="page-section section-divider">
-  <div class="layout card-grid card-grid--two">
-    <article class="card reveal">
-      <h2>Personal interests</h2>
-      <p>I have a long-running interest in computers, gaming, home servers, custom PCs, technical problem solving and cats.</p>
     </article>
 
-    <article class="card reveal reveal-delay-1">
+    <aside class="stack-list reveal reveal-delay-1">
+      <article>
+        <span>How I learn</span>
+        <p>Build it, test it, break it safely, then fix it properly.</p>
+      </article>
+      <article>
+        <span>Personal detail</span>
+        <p>Cat person, home-server tinkerer and long-term computer enthusiast.</p>
+      </article>
+      <article>
+        <span>What I value</span>
+        <p>Clear systems, useful documentation and technology that solves an actual problem.</p>
+      </article>
+    </aside>
+  </div>
+</section>
+
+<section class="section-pad section-line">
+  <div class="container two-grid">
+    <article class="info-card reveal">
+      <h2>Current direction</h2>
+      <p>
+        I am focused on entry-level IT support, technical support, infrastructure, web development and cyber security roles where I can keep building practical experience.
+      </p>
+    </article>
+    <article class="info-card reveal reveal-delay-1">
       <h2>Languages</h2>
-      <p>Romanian, English, Spanish and Portuguese. Portuguese is included because I am actively learning it for relocation and work in Portugal.</p>
+      <p>Romanian, English, Spanish and Portuguese. I am actively learning European Portuguese for relocation and work in Portugal.</p>
     </article>
   </div>
 </section>
 
   </main>
+
   
 <footer class="site-footer">
-  <div>
-    <p>© <span id="year"></span> Tiberiu Mihai Toma.</p>
-    <p>Built as a static portfolio with HTML, CSS and JavaScript.</p>
+  <div class="container footer-inner">
+    <div>
+      <p>© <span id="year"></span> Tiberiu Mihai Toma.</p>
+      <p class="footer-note">Static portfolio built with HTML, CSS and JavaScript.</p>
+    </div>
+
+    <nav aria-label="Footer links">
+      <a href="https://github.com/TibsT1" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/tiberiu-mihai-toma-788a03307/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:tiberiumtoma@gmail.com">Email</a>
+    </nav>
   </div>
-  <nav aria-label="Footer links">
-    <a href="https://github.com/TibsT1" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://www.linkedin.com/in/tiberiu-mihai-toma-788a03307/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href="mailto:tiberiumtoma@gmail.com">Email</a>
-  </nav>
 </footer>
 
-  <button class="scroll-top" type="button" aria-label="Scroll to top">Back to top</button>
+
+  <button class="scroll-top" type="button" aria-label="Scroll to top">Top</button>
+  <div class="theme-wipe" aria-hidden="true"></div>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>

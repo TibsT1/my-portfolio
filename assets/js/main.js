@@ -1,16 +1,12 @@
 const body = document.body;
-const themeButtons = document.querySelectorAll(".theme-button");
-const menuButton = document.querySelector(".menu-button");
 const nav = document.querySelector(".site-nav");
 const navLinks = document.querySelectorAll(".site-nav a");
-const navIndicator = document.querySelector(".site-nav__indicator");
+const navHighlight = document.querySelector(".nav-highlight");
+const menuToggle = document.querySelector(".menu-toggle");
+const themeToggle = document.querySelector(".theme-toggle");
+const themeWipe = document.querySelector(".theme-wipe");
 const scrollTopButton = document.querySelector(".scroll-top");
 const revealItems = document.querySelectorAll(".reveal");
-
-const themeWipe = document.createElement("div");
-themeWipe.className = "theme-wipe";
-themeWipe.setAttribute("aria-hidden", "true");
-document.body.appendChild(themeWipe);
 
 function easeOutQuart(value) {
   return 1 - Math.pow(1 - value, 4);
@@ -18,66 +14,62 @@ function easeOutQuart(value) {
 
 function smoothScrollTo(targetY, duration = 760) {
   const startY = window.scrollY;
-  const difference = targetY - startY;
+  const distance = targetY - startY;
   const startTime = performance.now();
 
-  function step(now) {
+  function frame(now) {
     const elapsed = now - startTime;
     const progress = Math.min(elapsed / duration, 1);
-    window.scrollTo(0, startY + difference * easeOutQuart(progress));
+    window.scrollTo(0, startY + distance * easeOutQuart(progress));
 
-    if (progress < 1) requestAnimationFrame(step);
+    if (progress < 1) requestAnimationFrame(frame);
   }
 
-  requestAnimationFrame(step);
+  requestAnimationFrame(frame);
 }
 
-function updateIndicator(link) {
-  if (!link || !navIndicator || window.innerWidth <= 960) return;
+function updateNavHighlight() {
+  const currentPage = document.documentElement.dataset.page;
+  const activeLink = document.querySelector(`.site-nav a[data-page="${currentPage}"]`);
+
+  navLinks.forEach((link) => {
+    link.classList.toggle("active", link === activeLink);
+  });
+
+  if (!activeLink || !navHighlight || window.innerWidth <= 960) return;
 
   const navRect = nav.getBoundingClientRect();
-  const linkRect = link.getBoundingClientRect();
-  const left = linkRect.left - navRect.left;
+  const linkRect = activeLink.getBoundingClientRect();
 
-  navIndicator.style.width = `${linkRect.width}px`;
-  navIndicator.style.transform = `translate(${left}px, -50%)`;
-  navIndicator.style.opacity = "1";
+  navHighlight.style.width = `${linkRect.width}px`;
+  navHighlight.style.transform = `translate(${linkRect.left - navRect.left}px, -50%)`;
+  navHighlight.style.opacity = "1";
 }
 
-function setActivePage() {
-  const page = document.documentElement.dataset.page;
-  const activeLink = document.querySelector(`.site-nav a[data-page="${page}"]`);
-
-  navLinks.forEach((link) => link.classList.toggle("active", link === activeLink));
-  updateIndicator(activeLink);
-}
-
-function applyTheme(isLight) {
+function setTheme(isLight) {
   body.classList.toggle("light-mode", isLight);
-  themeButtons.forEach((button) => button.setAttribute("aria-pressed", String(isLight)));
+  themeToggle?.setAttribute("aria-pressed", String(isLight));
   localStorage.setItem("tibi-portfolio-theme", isLight ? "light" : "dark");
 }
 
 if (localStorage.getItem("tibi-portfolio-theme") === "light") {
-  applyTheme(true);
+  setTheme(true);
 }
 
-themeButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const isLight = !body.classList.contains("light-mode");
+themeToggle?.addEventListener("click", () => {
+  const shouldBeLight = !body.classList.contains("light-mode");
 
-    themeWipe.classList.remove("is-active");
-    void themeWipe.offsetWidth;
-    themeWipe.classList.add("is-active");
+  themeWipe?.classList.remove("is-active");
+  void themeWipe?.offsetWidth;
+  themeWipe?.classList.add("is-active");
 
-    window.setTimeout(() => applyTheme(isLight), 210);
-  });
+  window.setTimeout(() => setTheme(shouldBeLight), 210);
 });
 
-menuButton?.addEventListener("click", () => {
+menuToggle?.addEventListener("click", () => {
   const isOpen = nav.classList.toggle("is-open");
-  menuButton.setAttribute("aria-expanded", String(isOpen));
-  menuButton.textContent = isOpen ? "Close" : "Menu";
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.textContent = isOpen ? "Close" : "Menu";
 });
 
 navLinks.forEach((link) => {
@@ -85,10 +77,10 @@ navLinks.forEach((link) => {
     link.classList.add("is-clicked");
     window.setTimeout(() => link.classList.remove("is-clicked"), 240);
 
-    if (nav?.classList.contains("is-open")) {
+    if (nav.classList.contains("is-open")) {
       nav.classList.remove("is-open");
-      menuButton.setAttribute("aria-expanded", "false");
-      menuButton.textContent = "Menu";
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.textContent = "Menu";
     }
   });
 });
@@ -120,8 +112,9 @@ function updateScrollButton() {
 scrollTopButton?.addEventListener("click", () => smoothScrollTo(0, 760));
 
 window.addEventListener("scroll", updateScrollButton, { passive: true });
-window.addEventListener("resize", setActivePage);
+window.addEventListener("resize", updateNavHighlight);
 
 document.getElementById("year").textContent = new Date().getFullYear();
-setActivePage();
+
+updateNavHighlight();
 updateScrollButton();

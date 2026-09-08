@@ -12,60 +12,64 @@
   <meta property="og:url" content="https://tibst1.github.io/tibs-portfolio/">
   <link rel="canonical" href="https://tibst1.github.io/tibs-portfolio/">
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <script>document.documentElement.dataset.page = "experience";</script>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
   
 <header class="site-header">
-  <a class="brand" href="index.html" aria-label="Tiberiu Mihai Toma home">
-    <img src="assets/icons/logo.svg" alt="" class="brand__mark">
-    <span>
-      <strong>Tibi Toma</strong>
-      <small>Technical Portfolio</small>
-    </span>
-  </a>
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Tiberiu Mihai Toma home">
+      <span class="brand-mark" aria-hidden="true">TT</span>
+      <span class="brand-text">
+        <strong>Tibi Toma</strong>
+        <small>Technical Portfolio</small>
+      </span>
+    </a>
 
-  <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">
-    Menu
-  </button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <span class="nav-highlight" aria-hidden="true"></span>
+      <a href="index.html" data-page="home">Home</a>
+<a href="about.html" data-page="about">About</a>
+<a href="projects.html" data-page="projects">Projects</a>
+<a href="skills.html" data-page="skills">Skills</a>
+<a href="experience.html" data-page="experience" aria-current="page">Experience</a>
+<a href="contact.html" data-page="contact">Contact</a>
+    </nav>
 
-  <nav class="site-nav" aria-label="Main navigation">
-    <span class="site-nav__indicator" aria-hidden="true"></span>
-    <a href="index.html" data-page="home">Home</a>
-    <a href="about.html" data-page="about">About</a>
-    <a href="projects.html" data-page="projects">Projects</a>
-    <a href="skills.html" data-page="skills">Skills</a>
-    <a href="experience.html" data-page="experience">Experience</a>
-    <a href="contact.html" data-page="contact">Contact</a>
-  </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
+        <span class="theme-label">Theme</span>
+        <span class="theme-switch" aria-hidden="true"></span>
+      </button>
 
-  <button class="theme-button" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
-    <span>Theme</span>
-    <span class="theme-button__switch" aria-hidden="true"></span>
-  </button>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        Menu
+      </button>
+    </div>
+  </div>
 </header>
+
 
   <main id="main-content">
     
-<section class="page-hero">
-  <div class="layout narrow reveal is-visible">
+<section class="page-hero section-pad">
+  <div class="container narrow reveal is-visible">
     <p class="eyebrow">Experience</p>
     <h1>Education, training and relevant work.</h1>
     <p class="lead">
-      This timeline focuses on technical learning, web development, peer support and project experience.
+      A timeline focused on technical learning, web development, peer support and practical computing experience.
     </p>
   </div>
 </section>
 
-<section class="page-section">
-  <div class="layout timeline timeline--large">
+<section class="section-pad section-line">
+  <div class="container timeline">
     <article class="timeline-item reveal">
       <time>Sep 2023 - Jun 2026</time>
       <div>
         <h2>BSc Cyber Security, Buckinghamshire New University</h2>
-        <p>Graduated with Upper Second-Class Honours, achieving an overall result of 69%. Studied network systems, data management, malware, databases, cyber risks and online threats.</p>
+        <p>Graduated with Upper Second-Class Honours, achieving 69% overall. Studied network systems, data management, malware, databases, cyber risks and online threats.</p>
       </div>
     </article>
 
@@ -81,7 +85,7 @@
       <time>2026</time>
       <div>
         <h2>Web Developer, ValuTints</h2>
-        <p>Designed and built a static business website for a car wrapping and window tinting company. Work included page structure, service copy, contact paths, responsive layout, image organisation and deployment preparation.</p>
+        <p>Designed and built a static business website for a car wrapping and window tinting company, including page structure, service copy, contact paths, responsive layout and deployment preparation.</p>
       </div>
     </article>
 
@@ -89,7 +93,7 @@
       <time>Oct 2022 - Nov 2022</time>
       <div>
         <h2>Web Developer Assistant, ExcellOne Technologies Ltd</h2>
-        <p>Supported development and maintenance of websites and web applications. Assisted with coding, debugging, quality assurance checks, project documentation and technical troubleshooting.</p>
+        <p>Supported website and web application development through coding, debugging, quality assurance checks, documentation and troubleshooting.</p>
       </div>
     </article>
 
@@ -100,46 +104,30 @@
         <p>Studied data, problem solving, Python programming, C# programming, SQL and software design at Bucks College Group.</p>
       </div>
     </article>
-
-    <article class="timeline-item reveal reveal-delay-2">
-      <time>Sep 2020 - Jul 2021</time>
-      <div>
-        <h2>Games Design Level 2</h2>
-        <p>Completed a games design course focused on game art, visual detail, creative problem solving and project discipline.</p>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section class="page-section section-divider">
-  <div class="layout card-grid card-grid--two">
-    <article class="card reveal">
-      <h2>Training</h2>
-      <p>MongoDB introductory course covering collections, documents, CRUD operations, basic querying and data modelling. University and PAL training included information security awareness, data protection, safeguarding, equality and inclusion, health and safety and professional conduct.</p>
-    </article>
-
-    <article class="card reveal reveal-delay-1">
-      <h2>Direction</h2>
-      <p>I am focused on building professional experience in entry-level IT support, technical support, cyber security, web development, infrastructure and systems roles.</p>
-    </article>
   </div>
 </section>
 
   </main>
+
   
 <footer class="site-footer">
-  <div>
-    <p>© <span id="year"></span> Tiberiu Mihai Toma.</p>
-    <p>Built as a static portfolio with HTML, CSS and JavaScript.</p>
+  <div class="container footer-inner">
+    <div>
+      <p>© <span id="year"></span> Tiberiu Mihai Toma.</p>
+      <p class="footer-note">Static portfolio built with HTML, CSS and JavaScript.</p>
+    </div>
+
+    <nav aria-label="Footer links">
+      <a href="https://github.com/TibsT1" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/tiberiu-mihai-toma-788a03307/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:tiberiumtoma@gmail.com">Email</a>
+    </nav>
   </div>
-  <nav aria-label="Footer links">
-    <a href="https://github.com/TibsT1" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://www.linkedin.com/in/tiberiu-mihai-toma-788a03307/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href="mailto:tiberiumtoma@gmail.com">Email</a>
-  </nav>
 </footer>
 
-  <button class="scroll-top" type="button" aria-label="Scroll to top">Back to top</button>
+
+  <button class="scroll-top" type="button" aria-label="Scroll to top">Top</button>
+  <div class="theme-wipe" aria-hidden="true"></div>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>

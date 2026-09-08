@@ -4,139 +4,147 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tiberiu Mihai Toma | Technical Portfolio</title>
-  <meta name="description" content="Technical portfolio for Tiberiu Mihai Toma, a Cybersecurity Graduate focused on IT support, self-hosting, networking, web development and practical computing projects.">
+  <meta name="description" content="Technical portfolio for Tiberiu Mihai Toma, Cybersecurity Graduate focused on IT support, self-hosting, networking, web development and practical computing projects.">
   <meta name="author" content="Tiberiu Mihai Toma">
   <meta property="og:title" content="Tiberiu Mihai Toma | Technical Portfolio">
-  <meta property="og:description" content="Technical portfolio for Tiberiu Mihai Toma, a Cybersecurity Graduate focused on IT support, self-hosting, networking, web development and practical computing projects.">
+  <meta property="og:description" content="Technical portfolio for Tiberiu Mihai Toma, Cybersecurity Graduate focused on IT support, self-hosting, networking, web development and practical computing projects.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tibst1.github.io/tibs-portfolio/">
   <link rel="canonical" href="https://tibst1.github.io/tibs-portfolio/">
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <script>document.documentElement.dataset.page = "home";</script>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
   
 <header class="site-header">
-  <a class="brand" href="index.html" aria-label="Tiberiu Mihai Toma home">
-    <img src="assets/icons/logo.svg" alt="" class="brand__mark">
-    <span>
-      <strong>Tibi Toma</strong>
-      <small>Technical Portfolio</small>
-    </span>
-  </a>
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Tiberiu Mihai Toma home">
+      <span class="brand-mark" aria-hidden="true">TT</span>
+      <span class="brand-text">
+        <strong>Tibi Toma</strong>
+        <small>Technical Portfolio</small>
+      </span>
+    </a>
 
-  <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">
-    Menu
-  </button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <span class="nav-highlight" aria-hidden="true"></span>
+      <a href="index.html" data-page="home" aria-current="page">Home</a>
+<a href="about.html" data-page="about">About</a>
+<a href="projects.html" data-page="projects">Projects</a>
+<a href="skills.html" data-page="skills">Skills</a>
+<a href="experience.html" data-page="experience">Experience</a>
+<a href="contact.html" data-page="contact">Contact</a>
+    </nav>
 
-  <nav class="site-nav" aria-label="Main navigation">
-    <span class="site-nav__indicator" aria-hidden="true"></span>
-    <a href="index.html" data-page="home">Home</a>
-    <a href="about.html" data-page="about">About</a>
-    <a href="projects.html" data-page="projects">Projects</a>
-    <a href="skills.html" data-page="skills">Skills</a>
-    <a href="experience.html" data-page="experience">Experience</a>
-    <a href="contact.html" data-page="contact">Contact</a>
-  </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
+        <span class="theme-label">Theme</span>
+        <span class="theme-switch" aria-hidden="true"></span>
+      </button>
 
-  <button class="theme-button" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
-    <span>Theme</span>
-    <span class="theme-button__switch" aria-hidden="true"></span>
-  </button>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        Menu
+      </button>
+    </div>
+  </div>
 </header>
+
 
   <main id="main-content">
     
-<section class="hero page-section">
-  <div class="layout hero__layout">
-    <div class="hero__copy reveal is-visible">
-      <p class="eyebrow">Cybersecurity Graduate · Web Development · Practical IT</p>
-      <h1>Technical projects built around systems, support and security.</h1>
+<section class="hero section-pad">
+  <div class="container hero-grid">
+    <div class="hero-copy reveal is-visible">
+      <p class="eyebrow">Cybersecurity Graduate · IT Support · Web Development</p>
+      <h1>Practical technical projects built around systems, support and security.</h1>
       <p class="lead">
-        I’m Tiberiu Mihai Toma, usually Tibi. I graduated from Buckinghamshire New University with a BSc in Cyber Security, achieving Upper Second-Class Honours with 69%. I build practical projects around self-hosting, networking, troubleshooting, web development and everyday computing.
+        I’m Tiberiu Mihai Toma, usually Tibi. I graduated from Buckinghamshire New University with a BSc in Cyber Security, achieving Upper Second-Class Honours with 69%. I build practical projects around self-hosting, troubleshooting, networking, web development and everyday computing.
       </p>
 
-      <div class="action-row">
-        <a class="button button--primary" href="projects.html">View projects</a>
+      <div class="button-row">
+        <a class="button button-primary" href="projects.html">View projects</a>
         <a class="button" href="assets/documents/cv.html">View CV</a>
         <a class="button" href="https://mail.google.com/mail/?view=cm&fs=1&to=tiberiumtoma%40gmail.com&su=Portfolio%20Contact&body=Hi%20Tibi%2C%0A%0AI%20found%20your%20portfolio%20and%20wanted%20to%20contact%20you." target="_blank" rel="noopener noreferrer">Email me</a>
       </div>
     </div>
 
     <aside class="summary-card reveal reveal-delay-1">
-      <div class="cat-art" aria-hidden="true">
-        <span>/\_/\</span>
-        <span>( o.o )</span>
-        <span>&gt; ^ &lt;</span>
-      </div>
+      <pre class="cat-art" aria-label="ASCII cat"> /\_/\
+( o.o )
+ &gt; ^ &lt;</pre>
 
-      <dl>
+      <dl class="facts-list">
         <div>
           <dt>Degree</dt>
           <dd>BSc Cyber Security, 2:1, 69%</dd>
         </div>
         <div>
           <dt>Current focus</dt>
-          <dd>Entry-level IT support, cyber security, infrastructure and web roles</dd>
+          <dd>Entry-level IT support, technical support, infrastructure, cyber security and web roles</dd>
         </div>
         <div>
           <dt>Recent work</dt>
-          <dd>Tibs Diagnostic Toolkit, ValuTints website, Nextcloud homelab, Jellyfin media server</dd>
+          <dd>Tibs Diagnostic Toolkit, ValuTints website, Nextcloud server and Jellyfin media server</dd>
         </div>
       </dl>
     </aside>
   </div>
 </section>
 
-<section class="page-section section-divider">
-  <div class="layout section-heading reveal">
-    <p class="section-index">Overview</p>
+<section class="section-pad section-line">
+  <div class="container split-heading reveal">
+    <p class="section-number">Overview</p>
     <div>
-      <h2>A portfolio focused on real workflows, not placeholder features.</h2>
+      <h2>Not a template landing page. A clear record of what I build.</h2>
       <p>
-        The site is split into separate pages so each section has room to explain what I built, what tools I used and what each project demonstrates.
+        This portfolio is now split into proper pages, with focused project write-ups, a structured CV page, working navigation, a custom 404 page and stable responsive styling.
       </p>
     </div>
   </div>
 
-  <div class="layout card-grid card-grid--three">
-    <article class="card reveal reveal-delay-1">
-      <h3>Systems and support</h3>
-      <p>Network checks, local diagnostics, troubleshooting reports, remote access and first-line IT workflows.</p>
-      <a href="projects.html">Read project details</a>
+  <div class="container three-grid">
+    <article class="info-card reveal reveal-delay-1">
+      <h3>Technical troubleshooting</h3>
+      <p>Python diagnostic tooling, network checks, system reports, website reachability tests and support-focused workflows.</p>
+      <a href="projects.html#diagnostic-toolkit">Read about the toolkit</a>
     </article>
 
-    <article class="card reveal reveal-delay-2">
+    <article class="info-card reveal reveal-delay-2">
       <h3>Web development</h3>
-      <p>Static websites, service pages, contact flows, responsive layouts and client-focused content organisation.</p>
-      <a href="projects.html#valutints">View ValuTints</a>
+      <p>Static business websites, responsive pages, contact paths, deployment preparation and client-focused structure.</p>
+      <a href="projects.html#valutints">View ValuTints work</a>
     </article>
 
-    <article class="card reveal reveal-delay-3">
+    <article class="info-card reveal reveal-delay-3">
       <h3>Self-hosting</h3>
-      <p>Nextcloud, Docker, Tailscale, Jellyfin, private storage, media access and home-server configuration.</p>
-      <a href="projects.html#nextcloud">View homelab work</a>
+      <p>Nextcloud, Docker, Tailscale, Jellyfin, home-server configuration, private access and remote connectivity.</p>
+      <a href="projects.html#nextcloud">View self-hosting work</a>
     </article>
   </div>
 </section>
 
   </main>
+
   
 <footer class="site-footer">
-  <div>
-    <p>© <span id="year"></span> Tiberiu Mihai Toma.</p>
-    <p>Built as a static portfolio with HTML, CSS and JavaScript.</p>
+  <div class="container footer-inner">
+    <div>
+      <p>© <span id="year"></span> Tiberiu Mihai Toma.</p>
+      <p class="footer-note">Static portfolio built with HTML, CSS and JavaScript.</p>
+    </div>
+
+    <nav aria-label="Footer links">
+      <a href="https://github.com/TibsT1" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/tiberiu-mihai-toma-788a03307/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:tiberiumtoma@gmail.com">Email</a>
+    </nav>
   </div>
-  <nav aria-label="Footer links">
-    <a href="https://github.com/TibsT1" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://www.linkedin.com/in/tiberiu-mihai-toma-788a03307/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href="mailto:tiberiumtoma@gmail.com">Email</a>
-  </nav>
 </footer>
 
-  <button class="scroll-top" type="button" aria-label="Scroll to top">Back to top</button>
+
+  <button class="scroll-top" type="button" aria-label="Scroll to top">Top</button>
+  <div class="theme-wipe" aria-hidden="true"></div>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>

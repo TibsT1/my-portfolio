@@ -12,63 +12,67 @@
   <meta property="og:url" content="https://tibst1.github.io/tibs-portfolio/">
   <link rel="canonical" href="https://tibst1.github.io/tibs-portfolio/">
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <script>document.documentElement.dataset.page = "contact";</script>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
   
 <header class="site-header">
-  <a class="brand" href="index.html" aria-label="Tiberiu Mihai Toma home">
-    <img src="assets/icons/logo.svg" alt="" class="brand__mark">
-    <span>
-      <strong>Tibi Toma</strong>
-      <small>Technical Portfolio</small>
-    </span>
-  </a>
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Tiberiu Mihai Toma home">
+      <span class="brand-mark" aria-hidden="true">TT</span>
+      <span class="brand-text">
+        <strong>Tibi Toma</strong>
+        <small>Technical Portfolio</small>
+      </span>
+    </a>
 
-  <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">
-    Menu
-  </button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <span class="nav-highlight" aria-hidden="true"></span>
+      <a href="index.html" data-page="home">Home</a>
+<a href="about.html" data-page="about">About</a>
+<a href="projects.html" data-page="projects">Projects</a>
+<a href="skills.html" data-page="skills">Skills</a>
+<a href="experience.html" data-page="experience">Experience</a>
+<a href="contact.html" data-page="contact" aria-current="page">Contact</a>
+    </nav>
 
-  <nav class="site-nav" aria-label="Main navigation">
-    <span class="site-nav__indicator" aria-hidden="true"></span>
-    <a href="index.html" data-page="home">Home</a>
-    <a href="about.html" data-page="about">About</a>
-    <a href="projects.html" data-page="projects">Projects</a>
-    <a href="skills.html" data-page="skills">Skills</a>
-    <a href="experience.html" data-page="experience">Experience</a>
-    <a href="contact.html" data-page="contact">Contact</a>
-  </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
+        <span class="theme-label">Theme</span>
+        <span class="theme-switch" aria-hidden="true"></span>
+      </button>
 
-  <button class="theme-button" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
-    <span>Theme</span>
-    <span class="theme-button__switch" aria-hidden="true"></span>
-  </button>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        Menu
+      </button>
+    </div>
+  </div>
 </header>
+
 
   <main id="main-content">
     
-<section class="page-hero">
-  <div class="layout narrow reveal is-visible">
+<section class="page-hero section-pad">
+  <div class="container narrow reveal is-visible">
     <p class="eyebrow">Contact</p>
     <h1>Contact and professional links.</h1>
     <p class="lead">
-      I’m open to entry-level IT, technical support, cyber security, infrastructure and web development opportunities.
+      Open to entry-level IT, technical support, cyber security, infrastructure and web development opportunities.
     </p>
   </div>
 </section>
 
-<section class="page-section">
-  <div class="layout contact-page-grid">
-    <article class="contact-main reveal">
+<section class="section-pad section-line">
+  <div class="container contact-grid">
+    <article class="contact-panel reveal">
       <h2>Based in Aylesbury, UK.</h2>
       <p>
-        I am also actively looking at opportunities connected to Portugal and am learning European Portuguese. I am especially interested in roles where I can support users, work with systems, document issues clearly and keep improving technically.
+        I am also actively looking at opportunities connected to Portugal and am learning European Portuguese. I am interested in roles where I can support users, work with systems, document issues clearly and keep improving technically.
       </p>
 
-      <div class="action-row">
-        <a class="button button--primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=tiberiumtoma%40gmail.com&su=Portfolio%20Contact&body=Hi%20Tibi%2C%0A%0AI%20found%20your%20portfolio%20and%20wanted%20to%20contact%20you." target="_blank" rel="noopener noreferrer">Email through Gmail</a>
+      <div class="button-row">
+        <a class="button button-primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=tiberiumtoma%40gmail.com&su=Portfolio%20Contact&body=Hi%20Tibi%2C%0A%0AI%20found%20your%20portfolio%20and%20wanted%20to%20contact%20you." target="_blank" rel="noopener noreferrer">Email through Gmail</a>
         <a class="button" href="mailto:tiberiumtoma@gmail.com">Email through mail app</a>
         <a class="button" href="assets/documents/cv.html">View CV</a>
       </div>
@@ -100,20 +104,26 @@
 </section>
 
   </main>
+
   
 <footer class="site-footer">
-  <div>
-    <p>© <span id="year"></span> Tiberiu Mihai Toma.</p>
-    <p>Built as a static portfolio with HTML, CSS and JavaScript.</p>
+  <div class="container footer-inner">
+    <div>
+      <p>© <span id="year"></span> Tiberiu Mihai Toma.</p>
+      <p class="footer-note">Static portfolio built with HTML, CSS and JavaScript.</p>
+    </div>
+
+    <nav aria-label="Footer links">
+      <a href="https://github.com/TibsT1" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/tiberiu-mihai-toma-788a03307/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:tiberiumtoma@gmail.com">Email</a>
+    </nav>
   </div>
-  <nav aria-label="Footer links">
-    <a href="https://github.com/TibsT1" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://www.linkedin.com/in/tiberiu-mihai-toma-788a03307/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href="mailto:tiberiumtoma@gmail.com">Email</a>
-  </nav>
 </footer>
 
-  <button class="scroll-top" type="button" aria-label="Scroll to top">Back to top</button>
+
+  <button class="scroll-top" type="button" aria-label="Scroll to top">Top</button>
+  <div class="theme-wipe" aria-hidden="true"></div>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>

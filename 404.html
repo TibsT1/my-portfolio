@@ -12,70 +12,82 @@
   <meta property="og:url" content="https://tibst1.github.io/tibs-portfolio/">
   <link rel="canonical" href="https://tibst1.github.io/tibs-portfolio/">
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <script>document.documentElement.dataset.page = "404";</script>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
   
 <header class="site-header">
-  <a class="brand" href="index.html" aria-label="Tiberiu Mihai Toma home">
-    <img src="assets/icons/logo.svg" alt="" class="brand__mark">
-    <span>
-      <strong>Tibi Toma</strong>
-      <small>Technical Portfolio</small>
-    </span>
-  </a>
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Tiberiu Mihai Toma home">
+      <span class="brand-mark" aria-hidden="true">TT</span>
+      <span class="brand-text">
+        <strong>Tibi Toma</strong>
+        <small>Technical Portfolio</small>
+      </span>
+    </a>
 
-  <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">
-    Menu
-  </button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <span class="nav-highlight" aria-hidden="true"></span>
+      <a href="index.html" data-page="home">Home</a>
+<a href="about.html" data-page="about">About</a>
+<a href="projects.html" data-page="projects">Projects</a>
+<a href="skills.html" data-page="skills">Skills</a>
+<a href="experience.html" data-page="experience">Experience</a>
+<a href="contact.html" data-page="contact">Contact</a>
+    </nav>
 
-  <nav class="site-nav" aria-label="Main navigation">
-    <span class="site-nav__indicator" aria-hidden="true"></span>
-    <a href="index.html" data-page="home">Home</a>
-    <a href="about.html" data-page="about">About</a>
-    <a href="projects.html" data-page="projects">Projects</a>
-    <a href="skills.html" data-page="skills">Skills</a>
-    <a href="experience.html" data-page="experience">Experience</a>
-    <a href="contact.html" data-page="contact">Contact</a>
-  </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
+        <span class="theme-label">Theme</span>
+        <span class="theme-switch" aria-hidden="true"></span>
+      </button>
 
-  <button class="theme-button" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
-    <span>Theme</span>
-    <span class="theme-button__switch" aria-hidden="true"></span>
-  </button>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        Menu
+      </button>
+    </div>
+  </div>
 </header>
+
 
   <main id="main-content">
     
-<section class="not-found page-section">
-  <article class="card reveal is-visible">
-    <p class="eyebrow">404</p>
-    <h1>Page not found.</h1>
-    <p class="lead">The link you opened does not match a page in this portfolio.</p>
-    <div class="action-row">
-      <a class="button button--primary" href="index.html">Return home</a>
-      <a class="button" href="projects.html">View projects</a>
-    </div>
-  </article>
+<section class="not-found section-pad">
+  <div class="container">
+    <article class="info-card reveal is-visible">
+      <p class="eyebrow">404</p>
+      <h1>Page not found.</h1>
+      <p class="lead">The page you opened does not exist in this portfolio.</p>
+      <div class="button-row">
+        <a class="button button-primary" href="index.html">Return home</a>
+        <a class="button" href="projects.html">View projects</a>
+      </div>
+    </article>
+  </div>
 </section>
 
   </main>
+
   
 <footer class="site-footer">
-  <div>
-    <p>© <span id="year"></span> Tiberiu Mihai Toma.</p>
-    <p>Built as a static portfolio with HTML, CSS and JavaScript.</p>
+  <div class="container footer-inner">
+    <div>
+      <p>© <span id="year"></span> Tiberiu Mihai Toma.</p>
+      <p class="footer-note">Static portfolio built with HTML, CSS and JavaScript.</p>
+    </div>
+
+    <nav aria-label="Footer links">
+      <a href="https://github.com/TibsT1" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/tiberiu-mihai-toma-788a03307/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:tiberiumtoma@gmail.com">Email</a>
+    </nav>
   </div>
-  <nav aria-label="Footer links">
-    <a href="https://github.com/TibsT1" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://www.linkedin.com/in/tiberiu-mihai-toma-788a03307/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href="mailto:tiberiumtoma@gmail.com">Email</a>
-  </nav>
 </footer>
 
-  <button class="scroll-top" type="button" aria-label="Scroll to top">Back to top</button>
+
+  <button class="scroll-top" type="button" aria-label="Scroll to top">Top</button>
+  <div class="theme-wipe" aria-hidden="true"></div>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
